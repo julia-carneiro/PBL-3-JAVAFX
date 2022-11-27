@@ -1,10 +1,12 @@
 package app.model;
  
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 import app.model.DAO.ArbitroDao;
 import app.model.DAO.SelecaoDao;
@@ -104,6 +106,35 @@ public class Biblioteca {
 		jog.setRed_card(qtdcartvermelho);
 		jog.setYellow_card(qtdcartamarelo);
 	}
+	
+	public static void oitavas(Scanner entrada, FaseDeGrupo fasegrupo) {
+		Map<Integer, Grupos> g = fasegrupo.getGrupos();
+		Map<Integer, Selecao> pontuacoes = new TreeMap<>();
+		int maior = 0;
+		int segmaior = 0;
+		for(Grupos gp: g.values()) {
+			for(Selecao selec: gp.getSelecoes()) {
+				if(selec.getPontuacao() > maior) {
+					maior = selec.getPontuacao();
+				}
+				else if(selec.getPontuacao() < maior && selec.getPontuacao() > segmaior) {
+					segmaior = selec.getPontuacao();
+				}
+			}
+		}
+		
+		for(Grupos gp: g.values()) {
+			for(Selecao selec: gp.getSelecoes()) {
+				if(selec.getPontuacao() == maior) {
+					pontuacoes.put(selec.getPontuacao(), selec);
+				}
+				else if (selec.getPontuacao() == segmaior){
+					pontuacoes.put(selec.getPontuacao(), selec);
+				}
+			}
+		}
+		
+	}
 
 	/**
 	 * Gerencia e seta os dados da Partida
@@ -151,7 +182,26 @@ public class Biblioteca {
 		Grupos grupo = g.get(codgrupo);
 		Map<Integer, Partida> p = grupo.getPartidas();
 		Partida part = p.get(codpart);
-
+		
+		for(Grupos grup: g.values()) {
+			for(Partida partida: grup.getPartidas().values()) {
+				if(golsel1 > golsel2) {
+					int pont = partida.getSelecao1().getPontuacao();
+					partida.getSelecao1().setPontuacao(pont+3);					
+				}
+				else if(golsel2 > golsel1) {
+					int pont = partida.getSelecao2().getPontuacao();
+					partida.getSelecao2().setPontuacao(pont+3);
+				}
+				else {
+					int pont1 = partida.getSelecao1().getPontuacao();
+					int pont2 = partida.getSelecao2().getPontuacao();
+					partida.getSelecao1().setPontuacao(pont1+1);
+					partida.getSelecao2().setPontuacao(pont2+1);
+				}
+			}
+		}
+		
 		part.setLocal(local);
 		part.setData(data);
 		part.setHorario(horario);

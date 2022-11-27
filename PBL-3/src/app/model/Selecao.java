@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class Selecao {
 	private String name;
+	private Integer pontuacao;
 	private Tecnico tecnico;
 	//Lista de jogadores da selecao
 	private List<Integer> jogadores = new ArrayList<Integer>();
@@ -32,7 +33,19 @@ public class Selecao {
 		this.jogadores = jogadores;
 	}
 	
+	
+	
 
+	public Integer getPontuacao() {
+		return pontuacao;
+	}
+
+	public void setPontuacao(Integer pontuacao) {
+		this.pontuacao = pontuacao;
+	}
+	
+
+	
 	public String getName() {
 		return name;
 	}
