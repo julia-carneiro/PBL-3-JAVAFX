@@ -5,5 +5,6 @@ module PBL3 {
 	requires javafx.base;
 	
 	opens app.controller to javafx.graphics, javafx.fxml;
+	opens app.model;
 	exports app;
 }
