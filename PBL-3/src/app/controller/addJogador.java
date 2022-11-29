@@ -10,7 +10,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class addJogador {
@@ -27,15 +29,12 @@ public class addJogador {
     @FXML
     private TextField nomeJog; 
     
-    @FXML
-    private Button btSalvar;
-    
     private Stage stage;
     
     private jogadorController controller;
     
     @FXML
-    void btSalvarAction(ActionEvent event) {
+    void btSalvarAction(MouseEvent event) {
     	Jogador jog = new Jogador(this.nomeJog.getText(), this.posicaoJog.getValue());
     	controller.getjogData().add(jog);
     	DAO.getJogDao().create(jog);

@@ -5,9 +5,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import app.model.Jogador;
-import app.model.Posicoes;
+
 import app.model.DAO.DAO;
-import app.model.DAO.jogadorDao;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
