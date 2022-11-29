@@ -107,7 +107,7 @@ public class Biblioteca {
 		jog.setYellow_card(qtdcartamarelo);
 	}
 	
-	public static void oitavas(Scanner entrada, FaseDeGrupo fasegrupo) {
+	public static void oitavas(FaseDeGrupo fasegrupo) {
 		Map<Integer, Grupos> g = fasegrupo.getGrupos();
 		Map<Integer, Selecao> pontuacoes = new TreeMap<>();
 		int maior = 0;

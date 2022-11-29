@@ -1,5 +1,6 @@
 package app.model.DAO;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,8 +57,8 @@ public class jogadorDao implements jogadorDaoInter {
 	/**
 	 * Retorna o map 
 	 */
-	public  Map<Integer, Jogador> retornaMap() {
-		return jogadores;
+	public  Collection<Jogador> retornaMap() {
+		return jogadores.values();
 	}
 
 }

@@ -20,15 +20,17 @@ public class Jogador {
 	 * @param posicao
 	 */
 
-	public Jogador() {
-		super();
+
+	public Jogador(String name, String posicao) {
 		setId(codJog.incrementAndGet());
+		this.name = name;
+		this.posicao = posicao;
 	}
 	
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}

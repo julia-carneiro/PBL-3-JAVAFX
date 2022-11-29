@@ -3,12 +3,16 @@ package app.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 
 public class MainWindow {
 
@@ -16,20 +20,13 @@ public class MainWindow {
 	@FXML 
 	private BorderPane bp;
 	
-	@FXML 
-	private AnchorPane ap;
-	
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
     
-    @FXML
-    void menu(MouseEvent event) {
-    	bp.setCenter(ap);
-    }
-
+  
     @FXML
     void arbitro(MouseEvent event) {
     	loadPage("arbitro");
@@ -56,7 +53,8 @@ public class MainWindow {
     	loadPage("tecnico");
     }
     
-    
+   
+   
     private void loadPage(String page) {
     	Parent root = null;
     	try {
