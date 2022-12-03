@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="360.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.editJogador">
   <columnConstraints>
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -17,8 +17,8 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <ComboBox prefWidth="150.0" GridPane.rowIndex="1" />
-      <Label alignment="CENTER" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #767BF4; -fx-background-radius: 800;" text="Salvar" textFill="WHITE" GridPane.rowIndex="2" />
-      <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="225.0" />
+      <ComboBox fx:id="posicaoJog" prefWidth="150.0" promptText="Posições" GridPane.rowIndex="1" />
+      <Label alignment="CENTER" onMouseClicked="#btSalvarAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Salvar" textFill="WHITE" GridPane.rowIndex="2" />
+      <TextField fx:id="edtiNomeJog" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="225.0" promptText="Digite o nome do Jogador" />
    </children>
 </GridPane>

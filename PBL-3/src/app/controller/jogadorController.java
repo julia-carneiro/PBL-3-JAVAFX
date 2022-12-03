@@ -76,7 +76,34 @@ public class jogadorController {
 
 	@FXML
 	void btEditAction(ActionEvent event) {
-		System.out.println("teste2");
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			URL xmlURL = getClass().getResource("/app/view/editJogador.fxml");
+			loader.setLocation(xmlURL);
+
+			Parent parent = loader.load();
+
+			Scene scene = new Scene(parent);
+
+			Stage stage = new Stage();
+			stage.setTitle("Edite o jogador");
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.centerOnScreen();
+			stage.initModality(Modality.APPLICATION_MODAL);
+
+			editJogador controller = loader.getController();
+			controller.setDialogStage(stage);
+			controller.setJogadorController(this);
+
+			stage.showAndWait();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//System.out.println("teste2");
 	}
 
 	@FXML
@@ -107,5 +134,9 @@ public class jogadorController {
 	public ObservableList<Jogador> getjogData() {
 		return jogData;
 	}
-
+	
+	public TableView<Jogador> getJogTabela(){
+		
+		return jogTabela;
+	}
 }
