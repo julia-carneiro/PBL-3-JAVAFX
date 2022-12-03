@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class editJogador {
 
     @FXML
-    private TextField edtiNomeJog;
+    private TextField editNomeJog;
 
     @FXML
     private ComboBox<String> posicaoJog;
@@ -28,11 +28,11 @@ public class editJogador {
     void btSalvarAction(MouseEvent event) {
     	int i = this.controller.getJogTabela().getSelectionModel().getSelectedIndex();
     	Jogador jog = DAO.getJogDao().findByCodjog(this.controller.getjogData().get(i).getId());
-    	jog.setName(this.edtiNomeJog.getText());
+    	jog.setName(this.editNomeJog.getText());
     	jog.setPosicao(this.posicaoJog.getValue());
     	controller.getjogData().set(i, jog);
     	DAO.getJogDao().update(this.controller.getjogData().get(i).getId(), jog);
-    	
+    	System.out.println(DAO.getJogDao().retornaMap());
     	stage.close();
     }
 

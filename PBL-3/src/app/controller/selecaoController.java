@@ -5,33 +5,22 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import app.model.Jogador;
-
+import app.model.Selecao;
 import app.model.DAO.DAO;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class jogadorController {
-
-	@FXML
-	private Button btAdd;
-
-	@FXML
-	private Button btEdit;
-
-	@FXML
-	private Button btRemove;
+public class selecaoController {
 
 	@FXML
 	private ResourceBundle resources;
@@ -40,16 +29,16 @@ public class jogadorController {
 	private URL location;
 
 	@FXML
-	private TableView<Jogador> jogTabela;
+	private TableView<Selecao> selecTabela;
 
 	@FXML
-	private ObservableList<Jogador> jogData;
+	private ObservableList<Selecao> selecData;
 
 	@FXML
-	void btAddAction(ActionEvent event) {
+	void btAddAction(MouseEvent event) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/addJogador.fxml");
+			URL xmlURL = getClass().getResource("/app/view/addSelecao.fxml");
 			loader.setLocation(xmlURL);
 
 			Parent parent = loader.load();
@@ -57,15 +46,15 @@ public class jogadorController {
 			Scene scene = new Scene(parent);
 
 			Stage stage = new Stage();
-			stage.setTitle("Adicione o jogador");
+			stage.setTitle("Adicione a seleção");
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.initModality(Modality.APPLICATION_MODAL);
 
-			addJogador controller = loader.getController();
+			addSelecao controller = loader.getController();
 			controller.setDialogStage(stage);
-			controller.setJogadorController(this);
+			controller.setSelecaoController(this);
 
 			stage.showAndWait();
 		} catch (IOException e) {
@@ -75,10 +64,10 @@ public class jogadorController {
 	}
 
 	@FXML
-	void btEditAction(ActionEvent event) {
+	void btEditAction(MouseEvent event) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/editJogador.fxml");
+			URL xmlURL = getClass().getResource("/app/view/editSelecao.fxml");
 			loader.setLocation(xmlURL);
 
 			Parent parent = loader.load();
@@ -86,31 +75,28 @@ public class jogadorController {
 			Scene scene = new Scene(parent);
 
 			Stage stage = new Stage();
-			stage.setTitle("Edite o jogador");
+			stage.setTitle("Edite a seleção");
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.initModality(Modality.APPLICATION_MODAL);
 
-			editJogador controller = loader.getController();
+			editSelecao controller = loader.getController();
 			controller.setDialogStage(stage);
-			controller.setJogadorController(this);
+			controller.setSelecaoController(this);
 
 			stage.showAndWait();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		//System.out.println("teste2");
 	}
 
 	@FXML
-	void btRemoveAction(ActionEvent event) {
+	void btRemoveAction(MouseEvent event) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/removeJogador.fxml");
+			URL xmlURL = getClass().getResource("/app/view/removeSelecao.fxml");
 			loader.setLocation(xmlURL);
 
 			Parent parent = loader.load();
@@ -118,15 +104,15 @@ public class jogadorController {
 			Scene scene = new Scene(parent);
 
 			Stage stage = new Stage();
-			stage.setTitle("Excluir jogador");
+			stage.setTitle("Excluir seleção");
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.initModality(Modality.APPLICATION_MODAL);
 
-			removeJogador controller = loader.getController();
+			removeSelecao controller = loader.getController();
 			controller.setDialogStage(stage);
-			controller.setJogadorController(this);
+			controller.setSelecaoController(this);
 
 			stage.showAndWait();
 		} catch (IOException e) {
@@ -137,30 +123,25 @@ public class jogadorController {
 
 	@FXML
 	void initialize() {
-		
-		this.jogData = FXCollections.observableArrayList();
-		
 
-		TableColumn idJog = new TableColumn("Id");
-		TableColumn nomeJog = new TableColumn("Nome");
-		TableColumn posicao = new TableColumn("Posição");
+		this.selecData = FXCollections.observableArrayList();
 
-		idJog.setCellValueFactory(new PropertyValueFactory<Jogador, Integer>("id"));
-		nomeJog.setCellValueFactory(new PropertyValueFactory<Jogador, String>("name"));
-		posicao.setCellValueFactory(new PropertyValueFactory<Jogador, String>("posicao"));
+		TableColumn nomeSelecao = new TableColumn("Nome");
 
-		this.jogTabela.getColumns().addAll(idJog, nomeJog, posicao);
-		this.jogData.addAll(DAO.getJogDao().retornaMap());
-		this.jogTabela.setItems(jogData);
+		nomeSelecao.setCellValueFactory(new PropertyValueFactory<Selecao, String>("name"));
+
+		this.selecTabela.getColumns().addAll(nomeSelecao);
+		this.selecData.addAll(DAO.getSelecDao().retornaListaSelecoes());
+		this.selecTabela.setItems(selecData);
 
 	}
-	
-	public ObservableList<Jogador> getjogData() {
-		return jogData;
+
+	public ObservableList<Selecao> getSelecData() {
+		return selecData;
 	}
-	
-	public TableView<Jogador> getJogTabela(){
-		
-		return jogTabela;
+
+	public TableView<Selecao> getSelecTabela() {
+
+		return selecTabela;
 	}
 }

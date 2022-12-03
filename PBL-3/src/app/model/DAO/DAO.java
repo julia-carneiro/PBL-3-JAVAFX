@@ -2,6 +2,7 @@ package app.model.DAO;
 
 public class DAO {
 	private static jogadorDao jogDAO = null;
+	private static SelecaoDao selecDAO = null;
 	
 	public static jogadorDao getJogDao() {
 		
@@ -9,6 +10,13 @@ public class DAO {
 			jogDAO = new jogadorDao();
 		}
 		return jogDAO;
+	}
+	
+	public static SelecaoDao getSelecDao() {
+		if(selecDAO == null) {
+			selecDAO = new SelecaoDao();
+		}
+		return selecDAO;
 	}
 		
 }
