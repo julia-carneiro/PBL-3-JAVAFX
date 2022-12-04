@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@900&display=swap');
+
+.backgroundColor{
+	-fx-background-color: linear-gradient(to top, #3a0b13,  #86142b);
+}
+
+.label1{
+	-fx-font-family: 'Alexandria', sans-serif;
+	-fx-font-size: 12;
+	-fx-font-color: #86142b;
+}
+
+.labelExcluir{
+	-fx-font-family: 'Alexandria', sans-serif;
+	-fx-font-size: 15;
+	-fx-font-color: #86142b;
+}
+
+.bt{
+	-fx-background-color:  #86142b;
+	-fx-background-radius: 50;
+	
+}
+
+.bt:hover{
+	-fx-background-color:   #aa5a6a;
+	-fx-background-radius: 50;
+}
+
+.bt:pressed{
+	-fx-background-color:  #cea1aa;
+	-fx-background-radius: 50;
+}
+
+.btNao{
+	-fx-background-color:  #cea1aa;
+	-fx-font-color: #86142b;
+	-fx-background-radius: 50;
+}

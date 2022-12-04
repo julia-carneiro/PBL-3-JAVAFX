@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import app.model.Jogador;
+import app.model.Selecao;
 import app.model.Tecnico;
 import app.model.DAO.DAO;
 import javafx.collections.FXCollections;
@@ -127,11 +128,13 @@ public class tecnicoController {
     	
     	TableColumn idTec = new TableColumn("Id");
     	TableColumn nomeTec = new TableColumn("Nome");
+    	TableColumn nomeSelecTec = new TableColumn("Selecao");
     	
     	idTec.setCellValueFactory(new PropertyValueFactory<Tecnico, Integer>("id"));
     	nomeTec.setCellValueFactory(new PropertyValueFactory<Tecnico, String>("name"));
+    	nomeSelecTec.setCellValueFactory(new PropertyValueFactory<Tecnico, Selecao>("selecao"));
     	
-    	this.tecTabela.getColumns().addAll(idTec, nomeTec);
+    	this.tecTabela.getColumns().addAll(idTec, nomeTec, nomeSelecTec);
     	this.tecData.addAll(DAO.getTecnicoDao().retornaMap());
     	this.tecTabela.setItems(tecData);
     }

@@ -25,17 +25,17 @@
       </TableView>
       <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0" spacing="30.0" GridPane.rowIndex="1">
          <children>
-            <Label alignment="CENTER" onMouseClicked="#btAddAction" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Adicionar" textFill="WHITE">
+            <Label alignment="CENTER" onMouseClicked="#btAddAction" prefHeight="35.0" prefWidth="75.0" styleClass="bt" stylesheets="@css/style.css" text="Adicionar" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" onMouseClicked="#btEditAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Editar" textFill="WHITE">
+            <Label alignment="CENTER" onMouseClicked="#btEditAction" prefHeight="35.0" prefWidth="66.0" styleClass="bt" stylesheets="@css/style.css" text="Editar" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" onMouseClicked="#btRemoveAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Excluir" textFill="WHITE">
+            <Label alignment="CENTER" onMouseClicked="#btRemoveAction" prefHeight="35.0" prefWidth="66.0" styleClass="bt" stylesheets="@css/style.css" text="Excluir" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

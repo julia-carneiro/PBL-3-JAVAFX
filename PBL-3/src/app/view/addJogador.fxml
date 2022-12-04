@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.addJogador">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="360.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.addJogador">
   <columnConstraints>
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -20,7 +20,7 @@
       <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="CENTER" onMouseClicked="#btSalvarAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Salvar" textFill="WHITE" GridPane.rowIndex="2">
+      <Label alignment="CENTER" onMouseClicked="#btSalvarAction" prefHeight="35.0" prefWidth="66.0" styleClass="bt" text="Salvar" textFill="WHITE" GridPane.rowIndex="2">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -30,7 +30,7 @@
       </Label>
       <VBox alignment="CENTER" prefHeight="87.0" prefWidth="360.0" spacing="10.0">
          <children>
-            <Label text="Digite o nome do jogador:">
+            <Label styleClass="label1" text="Digite o nome do jogador:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -44,9 +44,9 @@
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="1">
          <children>
-            <Label text="Selecione a posição do jogador:">
+            <Label styleClass="label1" text="Selecione a posição do jogador:">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="9.0" />
                </font>
             </Label>
             <ComboBox fx:id="posicaoJog" prefWidth="150.0" promptText="Posições" />

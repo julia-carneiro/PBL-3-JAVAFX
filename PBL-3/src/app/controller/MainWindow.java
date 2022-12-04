@@ -9,10 +9,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
 
 public class MainWindow {
 
@@ -20,13 +22,20 @@ public class MainWindow {
 	@FXML 
 	private BorderPane bp;
 	
+	@FXML
+	private ImageView img;
+	
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
     
-  
+    @FXML
+    void btMenu(MouseEvent event) {
+    	bp.setCenter(img);
+    }
+    
     @FXML
     void arbitro(MouseEvent event) {
     	loadPage("arbitro");
@@ -69,7 +78,6 @@ public class MainWindow {
     
     @FXML
     void initialize() {
-
     }
 
 }

@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import app.model.Jogador;
 import app.model.Selecao;
+import app.model.Tecnico;
 import app.model.Exceptions.JogadorLimiteException;
 import app.model.Exceptions.SelecaoLimiteException;
 import app.model.Interface.SelecaoDaoInter;
@@ -134,6 +135,15 @@ public class SelecaoDao implements SelecaoDaoInter {
 			listaSelecoes.add(selec);
 		}
 		return listaSelecoes;
+	}
+	
+	public boolean existeTecnico(String nomeSelecao) {
+		SelecaoDao selec = null;
+		Selecao selecao = selec.findByName(nomeSelecao);
+		if(selecao.getTecnico() != null) {
+			return true;
+		}
+		return false;
 	}
 }
 	
