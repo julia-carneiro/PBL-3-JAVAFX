@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="app.controller.selecaoController">
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.selecaoController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="363.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <TableView fx:id="selecTabela" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="315.0" prefWidth="600.0">
@@ -23,7 +23,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0" spacing="30.0" GridPane.rowIndex="1">
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0" spacing="30.0" GridPane.rowIndex="1">
          <children>
             <Label alignment="CENTER" onMouseClicked="#btAddAction" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Adicionar" textFill="WHITE">
                <font>

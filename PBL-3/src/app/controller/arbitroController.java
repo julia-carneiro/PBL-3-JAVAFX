@@ -4,18 +4,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import app.model.Jogador;
-
+import app.model.Arbitro;
+import app.model.Tecnico;
 import app.model.DAO.DAO;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -23,7 +20,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class jogadorController {
+public class arbitroController {
+
 	@FXML
 	private ResourceBundle resources;
 
@@ -31,16 +29,15 @@ public class jogadorController {
 	private URL location;
 
 	@FXML
-	private TableView<Jogador> jogTabela;
+	private TableView<Arbitro> arbitroTabela;
 
-	@FXML
-	private ObservableList<Jogador> jogData;
+	private ObservableList<Arbitro> arbData;
 
 	@FXML
 	void btAddAction(MouseEvent event) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/addJogador.fxml");
+			URL xmlURL = getClass().getResource("/app/view/addArbitro.fxml");
 			loader.setLocation(xmlURL);
 
 			Parent parent = loader.load();
@@ -48,15 +45,15 @@ public class jogadorController {
 			Scene scene = new Scene(parent);
 
 			Stage stage = new Stage();
-			stage.setTitle("Adicione o jogador");
+			stage.setTitle("Adicione o árbitro");
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.initModality(Modality.APPLICATION_MODAL);
 
-			addJogador controller = loader.getController();
+			addArbitro controller = loader.getController();
 			controller.setDialogStage(stage);
-			controller.setJogadorController(this);
+			controller.setArbitroController(this);
 
 			stage.showAndWait();
 		} catch (IOException e) {
@@ -69,7 +66,7 @@ public class jogadorController {
 	void btEditAction(MouseEvent event) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/editJogador.fxml");
+			URL xmlURL = getClass().getResource("/app/view/editArbitro.fxml");
 			loader.setLocation(xmlURL);
 
 			Parent parent = loader.load();
@@ -77,31 +74,28 @@ public class jogadorController {
 			Scene scene = new Scene(parent);
 
 			Stage stage = new Stage();
-			stage.setTitle("Edite o jogador");
+			stage.setTitle("Edite o árbitro");
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.initModality(Modality.APPLICATION_MODAL);
 
-			editJogador controller = loader.getController();
+			editArbitro controller = loader.getController();
 			controller.setDialogStage(stage);
-			controller.setJogadorController(this);
+			controller.setArbitroController(this);
 
 			stage.showAndWait();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		//System.out.println("teste2");
 	}
 
 	@FXML
 	void btRemoveAction(MouseEvent event) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/removeJogador.fxml");
+			URL xmlURL = getClass().getResource("/app/view/removeArbitro.fxml");
 			loader.setLocation(xmlURL);
 
 			Parent parent = loader.load();
@@ -109,15 +103,15 @@ public class jogadorController {
 			Scene scene = new Scene(parent);
 
 			Stage stage = new Stage();
-			stage.setTitle("Excluir jogador");
+			stage.setTitle("Excluir árbitro");
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.initModality(Modality.APPLICATION_MODAL);
 
-			removeJogador controller = loader.getController();
+			removeArbitro controller = loader.getController();
 			controller.setDialogStage(stage);
-			controller.setJogadorController(this);
+			controller.setArbitroController(this);
 
 			stage.showAndWait();
 		} catch (IOException e) {
@@ -128,30 +122,26 @@ public class jogadorController {
 
 	@FXML
 	void initialize() {
-		
-		this.jogData = FXCollections.observableArrayList();
-		
+		this.arbData = FXCollections.observableArrayList();
 
-		TableColumn idJog = new TableColumn("Id");
-		TableColumn nomeJog = new TableColumn("Nome");
-		TableColumn posicao = new TableColumn("Posição");
+		TableColumn idArb = new TableColumn("Id");
+		TableColumn nomeArb = new TableColumn("Nome");
 
-		idJog.setCellValueFactory(new PropertyValueFactory<Jogador, Integer>("id"));
-		nomeJog.setCellValueFactory(new PropertyValueFactory<Jogador, String>("name"));
-		posicao.setCellValueFactory(new PropertyValueFactory<Jogador, String>("posicao"));
+		idArb.setCellValueFactory(new PropertyValueFactory<Tecnico, Integer>("id"));
+		nomeArb.setCellValueFactory(new PropertyValueFactory<Tecnico, String>("name"));
 
-		this.jogTabela.getColumns().addAll(idJog, nomeJog, posicao);
-		this.jogData.addAll(DAO.getJogDao().retornaMap());
-		this.jogTabela.setItems(jogData);
-
+		this.arbitroTabela.getColumns().addAll(idArb, nomeArb);
+		this.arbData.addAll(DAO.getArbitroDao().retornaMap());
+		this.arbitroTabela.setItems(arbData);
 	}
-	
-	public ObservableList<Jogador> getjogData() {
-		return jogData;
+
+	public ObservableList<Arbitro> getArbData() {
+		// TODO Auto-generated method stub
+		return arbData;
 	}
-	
-	public TableView<Jogador> getJogTabela(){
-		
-		return jogTabela;
+
+	public TableView<Arbitro> getArbTabela() {
+		return arbitroTabela;
 	}
+
 }

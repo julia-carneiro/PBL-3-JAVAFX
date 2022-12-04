@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.addJogador">
@@ -14,19 +15,12 @@
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField fx:id="nomeJog" alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="225.0" promptText="Digite o nome do jogador:" GridPane.valignment="CENTER">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <ComboBox fx:id="posicaoJog" prefWidth="150.0" promptText="Posições" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Label alignment="CENTER" onMouseClicked="#btSalvarAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Salvar" textFill="WHITE" GridPane.rowIndex="3">
+      <Label alignment="CENTER" onMouseClicked="#btSalvarAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Salvar" textFill="WHITE" GridPane.rowIndex="2">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -34,5 +28,29 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <VBox alignment="CENTER" prefHeight="87.0" prefWidth="360.0" spacing="10.0">
+         <children>
+            <Label text="Digite o nome do jogador:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomeJog" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="225.0" promptText="Digite o nome do jogador:">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="1">
+         <children>
+            <Label text="Selecione a posição do jogador:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="posicaoJog" prefWidth="150.0" promptText="Posições" />
+         </children>
+      </VBox>
    </children>
 </GridPane>

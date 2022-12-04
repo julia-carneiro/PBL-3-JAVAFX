@@ -19,6 +19,6 @@
    <children>
       <ComboBox fx:id="posicaoJog" prefWidth="150.0" promptText="Posições" GridPane.rowIndex="1" />
       <Label alignment="CENTER" onMouseClicked="#btSalvarAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #be1111; -fx-background-radius: 800;" text="Salvar" textFill="WHITE" GridPane.rowIndex="2" />
-      <TextField fx:id="edtiNomeJog" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="225.0" promptText="Digite o nome do Jogador" />
+      <TextField fx:id="editNomeJog" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="225.0" promptText="Digite o nome do Jogador" />
    </children>
 </GridPane>

@@ -1,5 +1,6 @@
 package app.model.Interface;
 
+import java.util.Collection;
 import java.util.Map;
 
 import app.model.Arbitro;
@@ -14,5 +15,5 @@ public interface arbitroDaoInter {
 	public void update(Integer codarb, Arbitro arbitro);
 	public void delete(Integer codarb);
 	public Arbitro findByIdArb(Integer codarb);
-	public Map<Integer, Arbitro> retornaMap();
+	public Collection<Arbitro> retornaMap();
 }

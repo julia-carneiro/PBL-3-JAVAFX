@@ -12,43 +12,48 @@ import javafx.stage.Stage;
 
 public class removeSelecao {
 
-    @FXML
-    private ResourceBundle resources;
+	@FXML
+	private ResourceBundle resources;
 
-    @FXML
-    private URL location;
+	@FXML
+	private URL location;
 
 	private selecaoController controller;
 
 	private Stage stage;
 
-    @FXML
-    void btRemoveAction(MouseEvent event) {
-    	int i = this.controller.getSelecTabela().getSelectionModel().getSelectedIndex();
-    	Selecao selec = DAO.getSelecDao().findByName(this.controller.getSelecData().get(i).getName());
-   
-    	
-    	this.controller.getSelecData().remove(i);
-    	DAO.getSelecDao().delete(selec.getName());
-    	//Debug
-    	System.out.println(DAO.getJogDao().retornaMap());
-    	stage.close();
-    }
-    
-    @FXML
-    void btCancelAction(MouseEvent event) {
-    	stage.close();
-    }
-    
-    void setSelecaoController(selecaoController controller) {
-    	this.controller = controller;
-    }
+	@FXML
+	void btRemoveAction(MouseEvent event) {
+		// Pega index do selecionado na tabela
+		int i = this.controller.getSelecTabela().getSelectionModel().getSelectedIndex();
+
+		// Pega objeto do index selecionado na tabela
+		Selecao selec = DAO.getSelecDao().findByName(this.controller.getSelecData().get(i).getName());
+
+		
+		//Remove do DAO
+		DAO.getSelecDao().delete(selec.getName());
+		
+		//Remove da observableList
+		this.controller.getSelecData().remove(i);
+
+		// Debug
+		System.out.println(DAO.getSelecDao().retornaListaSelecoes());
+		stage.close();
+	}
+
+	@FXML
+	void btCancelAction(MouseEvent event) {
+		stage.close();
+	}
+
+	void setSelecaoController(selecaoController controller) {
+		this.controller = controller;
+	}
 
 	public void setDialogStage(Stage stage) {
 		this.stage = stage;
-		
+
 	}
-    
- 
 
 }
