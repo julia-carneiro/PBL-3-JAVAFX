@@ -13,8 +13,9 @@ public class Selecao {
 	private String name;
 	private Integer pontuacao;
 	private Tecnico tecnico;
+	
 	//Lista de jogadores da selecao
-	private List<Integer> jogadores = new ArrayList<Integer>();
+	private List<Jogador> jogadores = new ArrayList<Jogador>();
 
 	/**
 	 * Construtor da Selecao
@@ -25,15 +26,13 @@ public class Selecao {
 		this.name = name;
 	}  
 	
-	public List<Integer> getJogadores() {
+	public List<Jogador> getJogadores() {
 		return jogadores; 
 	}
 	 
-	public void setJogadores(List<Integer> jogadores) {
+	public void setJogadores(List<Jogador> jogadores) {
 		this.jogadores = jogadores;
 	}
-	
-	
 	
 
 	public Integer getPontuacao() {

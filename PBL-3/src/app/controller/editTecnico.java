@@ -53,7 +53,7 @@ public class editTecnico {
 				}
 
 	    	}else {
-	    		if(selec.getTecnico() == null) {
+	    		if(selec.getTecnico() != null) {
 		    		//Seta novo nome
 		    		tecnico.setName(this.editNomeTec.getText());
 		    		tecnico.setSelecao(selec);

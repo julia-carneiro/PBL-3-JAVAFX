@@ -32,14 +32,11 @@ public class addTecnico {
 
 	@FXML
 	void btSalvarAction(MouseEvent event) {
-
-		// boolean existeSelec =
-		// DAO.getSelecDao().existeSelecao(this.nomeSelecTec.getText());
+		//Procura selecao
 		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecTec.getText());
-
-		// System.out.println(existeSelec);
 		if (selec == null) {
 			try {
+				//Adiciona seleção caso não exista ainda
 				Selecao selecao = new Selecao(this.nomeSelecTec.getText());
 				Tecnico tecnico = new Tecnico(this.nomeTec.getText(), selecao);
 				controller.getTecData().add(tecnico);
@@ -52,6 +49,7 @@ public class addTecnico {
 			}
 
 		} else {
+			//Caso selecao já tenha tecnico
 			if(selec.getTecnico() != null) {
 				Tecnico tecnico = new Tecnico(this.nomeTec.getText(), selec);
 				controller.getTecData().add(tecnico);

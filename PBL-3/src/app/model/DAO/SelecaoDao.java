@@ -22,7 +22,7 @@ import app.model.Interface.SelecaoDaoInter;
  */
 public class SelecaoDao implements SelecaoDaoInter {
 	private Map <String, Selecao> selecoes = new HashMap<>();
-	public List<Integer> listajogadores = new ArrayList<Integer>();
+	public List<Jogador> listajogadores = new ArrayList<Jogador>();
 	
 	/**
 	 * Cria a selecao no map, com seu nome sendo a chave e o objeto como valor.
@@ -59,10 +59,10 @@ public class SelecaoDao implements SelecaoDaoInter {
 	 * @throws JogadorLimiteException 
 	 */
 	@Override
-	public void createListJogador(Selecao selecao, int idjog) throws JogadorLimiteException{
+	public void createListJogador(Selecao selecao, Jogador jogador) throws JogadorLimiteException{
 		if(listajogadores.size() < 11) {
 			listajogadores = selecao.getJogadores();
-			listajogadores.add(idjog);
+			listajogadores.add(jogador);
 			selecao.setJogadores(listajogadores);
 		}
 		else {

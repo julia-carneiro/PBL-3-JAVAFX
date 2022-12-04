@@ -3,6 +3,7 @@ package app.model.Interface;
 import java.util.List;
 import java.util.Map;
 
+import app.model.Jogador;
 import app.model.Selecao;
 import app.model.DAO.jogadorDao;
 import app.model.Exceptions.JogadorLimiteException;
@@ -20,7 +21,14 @@ public interface SelecaoDaoInter {
 	public Selecao findByName(String name);
 	public boolean existeSelecao(String name);
 	public Map<String, Selecao> retornaMap();
-	public void createListJogador(Selecao selecao, int idjog) throws JogadorLimiteException ;
+	public void createListJogador(Selecao selecao, Jogador jogador) throws JogadorLimiteException;
 	public void deleteJogador_List(jogadorDao jogador_dao, int idjog);	
 	public List<Selecao> retornaListaSelecoes();
+	/**
+	 * Cria lista de ID(codigo) de jogadores da selecao
+	 * @param selecao
+	 * @param idjog
+	 * @throws JogadorLimiteException 
+	 */
+	
 }

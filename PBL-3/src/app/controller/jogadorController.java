@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import app.model.Jogador;
-
+import app.model.Selecao;
 import app.model.DAO.DAO;
 
 import javafx.collections.FXCollections;
@@ -135,12 +135,14 @@ public class jogadorController {
 		TableColumn idJog = new TableColumn("Id");
 		TableColumn nomeJog = new TableColumn("Nome");
 		TableColumn posicao = new TableColumn("Posição");
+		TableColumn nomeSelec = new TableColumn("Seleção");
 
 		idJog.setCellValueFactory(new PropertyValueFactory<Jogador, Integer>("id"));
 		nomeJog.setCellValueFactory(new PropertyValueFactory<Jogador, String>("name"));
 		posicao.setCellValueFactory(new PropertyValueFactory<Jogador, String>("posicao"));
+		nomeSelec.setCellValueFactory(new PropertyValueFactory<Jogador, Selecao>("selecao"));
 
-		this.jogTabela.getColumns().addAll(idJog, nomeJog, posicao);
+		this.jogTabela.getColumns().addAll(idJog, nomeJog, posicao, nomeSelec);
 		this.jogData.addAll(DAO.getJogDao().retornaMap());
 		this.jogTabela.setItems(jogData);
 

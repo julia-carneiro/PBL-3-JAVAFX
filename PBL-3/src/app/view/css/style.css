@@ -25,6 +25,7 @@
 .bt:hover{
 	-fx-background-color:   #aa5a6a;
 	-fx-background-radius: 50;
+	-fx-cursor: hand;
 }
 
 .bt:pressed{
@@ -36,4 +37,5 @@
 	-fx-background-color:  #cea1aa;
 	-fx-font-color: #86142b;
 	-fx-background-radius: 50;
+	-fx-cursor: hand;
 }
