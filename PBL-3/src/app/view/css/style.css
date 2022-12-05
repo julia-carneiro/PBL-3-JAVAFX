@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@900&display=swap');
+
 
 .backgroundColor{
 	-fx-background-color: linear-gradient(to top, #3a0b13,  #86142b);
 }
 
 .label1{
-	-fx-font-family: 'Alexandria', sans-serif;
 	-fx-font-size: 12;
 	-fx-font-color: #86142b;
 }
@@ -19,7 +18,7 @@
 .bt{
 	-fx-background-color:  #86142b;
 	-fx-background-radius: 50;
-	
+
 }
 
 .bt:hover{
@@ -29,7 +28,7 @@
 }
 
 .bt:pressed{
-	-fx-background-color:  #cea1aa;
+	-fx-background-color:  #1b0202;
 	-fx-background-radius: 50;
 }
 
