@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 //import java.util.concurrent.atomic.AtomicInteger;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 /**
  * 
  * @author Julia Carneiro e Humberto Costa
@@ -26,8 +29,11 @@ public class Selecao {
 		this.name = name;
 	}  
 	
-	public List<Jogador> getJogadores() {
-		return jogadores; 
+
+	
+	public ObservableList<Jogador> getJogadores() {
+		return FXCollections.observableArrayList(jogadores);
+		//return jogadores; 
 	}
 	 
 	public void setJogadores(List<Jogador> jogadores) {
@@ -69,6 +75,7 @@ public class Selecao {
 		return this.name.toUpperCase();
 	}
 
+	
 
 	
 

@@ -86,12 +86,16 @@ public class Jogador {
 		this.selecao = selecao;
 	}
 	
-	@Override
+/*	@Override
 	public String toString() {
 		return "\n\nNome: " + this.name +"\nId: " + this.id + "\nPosicao: " + this.posicao + "\nQuantidade de gols: " + this.qtd_gols
 				+"\nQuantidade de cartoes vermelho: " + this.red_card + "\nQuantidade de cartoes amarelo: " +this.yellow_card + "\nSelecao: " + this.selecao;
-	}
+	}*/
 
-	
+	@Override
+	public String toString() {
+		return "\n\nNome: " + this.name + "\nPosicao: " + this.posicao;
+		
+	}
 	 
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
+<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="207.0" spacing="20.0" style="-fx-background-color: #3a0b13;" BorderPane.alignment="CENTER">
          <children>
@@ -42,6 +42,11 @@
                </font>
             </Button>
             <Button mnemonicParsing="false" onMouseClicked="#arbitro" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Árbitro" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#pesquisa" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Pesquisa" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="15.0" />
                </font>
