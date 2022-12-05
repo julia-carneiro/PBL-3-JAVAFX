@@ -1,3 +1,5 @@
+
+
 .backgroundColor{
 	-fx-background-color: linear-gradient(to top, #3a0b13,  #86142b);
 }
@@ -8,6 +10,7 @@
 }
 
 .labelExcluir{
+	-fx-font-family: 'Alexandria', sans-serif;
 	-fx-font-size: 15;
 	-fx-font-color: #86142b;
 }
