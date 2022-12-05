@@ -13,9 +13,9 @@
 
 <BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
    <left>
-      <VBox alignment="TOP_CENTER" prefHeight="554.0" prefWidth="207.0" spacing="20.0" style="-fx-background-color: #3a0b13;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="207.0" spacing="20.0" style="-fx-background-color: #3a0b13;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#btMenu" prefHeight="82.0" prefWidth="172.0" style="-fx-background-color: #eeebe7; -fx-background-radius: 0 0 30 30;" text="SYSCOPA" textAlignment="CENTER" textFill="#3a0b13">
+            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#btMenu" text="SYSCOPA" textAlignment="CENTER" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -23,87 +23,48 @@
                   <Insets />
                </VBox.margin>
                <font>
-                  <Font name="Segoe UI Black Italic" size="32.0" />
+                  <Font name="Segoe UI Black Italic" size="20.0" />
                </font>
-               <effect>
-                  <DropShadow>
-                     <color>
-                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
-                     </color>
-                  </DropShadow>
-               </effect>
             </Label>
-            <Button mnemonicParsing="false" onMouseClicked="#jogador" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Jogador" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#jogador" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Jogador" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI Black" size="17.0" />
+                  <Font name="Segoe UI Black" size="15.0" />
                </font>
-               <effect>
-                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
-                     <color>
-                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
-                     </color>
-                  </DropShadow>
-               </effect>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#selecao" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Seleção" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#selecao" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Seleção" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI Black" size="17.0" />
+                  <Font name="Segoe UI Black" size="15.0" />
                </font>
-               <effect>
-                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
-                     <color>
-                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
-                     </color>
-                  </DropShadow>
-               </effect>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#tecnico" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Técnico" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#tecnico" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Técnico" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI Black" size="17.0" />
+                  <Font name="Segoe UI Black" size="15.0" />
                </font>
-               <effect>
-                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
-                     <color>
-                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
-                     </color>
-                  </DropShadow>
-               </effect>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#arbitro" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Árbitro" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#arbitro" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Árbitro" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI Black" size="17.0" />
+                  <Font name="Segoe UI Black" size="15.0" />
                </font>
-               <effect>
-                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
-                     <color>
-                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
-                     </color>
-                  </DropShadow>
-               </effect>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI Black" size="17.0" />
+                  <Font name="Segoe UI Black" size="15.0" />
                </font>
-               <effect>
-                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
-                     <color>
-                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
-                     </color>
-                  </DropShadow>
-               </effect>
             </Button>
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <effect>
-            <DropShadow height="0.0" radius="22.2125" spread="0.25" width="90.85">
+            <DropShadow radius="26.12" spread="0.14" width="85.48">
                <color>
                   <Color red="0.22745098173618317" green="0.04313725605607033" blue="0.07450980693101883" />
                </color>
             </DropShadow>
          </effect>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
       </VBox>
    </left>
    <center>
