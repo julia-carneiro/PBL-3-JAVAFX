@@ -50,6 +50,11 @@ public class MainWindow {
     void jogador(MouseEvent event) {
     	loadPage("jogador");
     }
+    
+    @FXML
+    void pesquisa(MouseEvent event) {
+    	loadPage("pesquisa");
+    }
 
     @FXML
     void selecao(MouseEvent event) {

@@ -52,11 +52,16 @@ public class addJogador {
 				// Cria nos DAOS
 				DAO.getSelecDao().create(selecao);
 				DAO.getJogDao().create(jog);
-				DAO.getSelecDao().createListJogador(selecao, jog);
+				try {
+					DAO.getSelecDao().createListJogador(selecao, jog);
+				} catch (JogadorLimiteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				//Add no controller
 				controller.getjogData().add(jog);
 
-			} catch (SelecaoLimiteException | JogadorLimiteException e) {
+			} catch (SelecaoLimiteException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
