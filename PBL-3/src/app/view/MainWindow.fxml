@@ -81,6 +81,18 @@
                   </DropShadow>
                </effect>
             </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#pesquisa" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Pesquisa" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
+                     <color>
+                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
             <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="17.0" />
