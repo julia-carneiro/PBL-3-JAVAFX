@@ -10,6 +10,7 @@ public class Jogador {
 	private Integer red_card;
 	private Integer qtd_gols;
 	private String posicao;
+	private Selecao selecao;
 
 	/**
 	 * Construtor de Jogador / o setId com a AtomicInteger codJog serve para gerar um codigo de jogador automaticamente
@@ -21,10 +22,11 @@ public class Jogador {
 	 */
 
 
-	public Jogador(String name, String posicao) {
+	public Jogador(String name, String posicao, Selecao selecao) {
 		setId(codJog.incrementAndGet());
 		this.name = name;
 		this.posicao = posicao;
+		this.selecao = selecao;
 	}
 	
 	public String getName() {
@@ -76,10 +78,20 @@ public class Jogador {
 		this.posicao = posicao;
 	}
 	
+	public Selecao getSelecao() {
+		return selecao;
+	}
+
+	public void setSelecao(Selecao selecao) {
+		this.selecao = selecao;
+	}
+	
 	@Override
 	public String toString() {
 		return "\n\nNome: " + this.name +"\nId: " + this.id + "\nPosicao: " + this.posicao + "\nQuantidade de gols: " + this.qtd_gols
-				+"\nQuantidade de cartoes vermelho: " + this.red_card + "\nQuantidade de cartoes amarelo: " +this.yellow_card;
+				+"\nQuantidade de cartoes vermelho: " + this.red_card + "\nQuantidade de cartoes amarelo: " +this.yellow_card + "\nSelecao: " + this.selecao;
 	}
+
+	
 	 
 }

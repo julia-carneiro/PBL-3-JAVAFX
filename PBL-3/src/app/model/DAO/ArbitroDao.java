@@ -1,6 +1,7 @@
 package app.model.DAO;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -57,8 +58,8 @@ public class ArbitroDao implements arbitroDaoInter {
 	/**
 	 * Retorna o map de arbitros
 	 */
-	public Map<Integer, Arbitro> retornaMap() {	
-		return arbitros;
+	public Collection<Arbitro> retornaMap() {	
+		return arbitros.values();
 	}
 }
 

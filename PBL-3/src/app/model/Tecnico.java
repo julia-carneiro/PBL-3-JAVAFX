@@ -10,15 +10,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Tecnico {
 	private String name;
 	private Integer id;
+	private Selecao selecao;
 	private static AtomicInteger codtec = new AtomicInteger();	
 	
 	/**  
 	 * Construtor de tecnico
 	 * @param name 
 	 */
-	public Tecnico(String name) {
+	public Tecnico(String name, Selecao selecao) {
 		super();
 		this.name = name;
+		this.selecao = selecao;
 		setId(codtec.incrementAndGet());
 	}
 
@@ -43,5 +45,13 @@ public class Tecnico {
 	@Override
 	public String toString() {
 		return "Nome: " + this.name + "\nId: " + this.id;
+	}
+
+	public Selecao getSelecao() {
+		return selecao;
+	}
+
+	public void setSelecao(Selecao selecao) {
+		this.selecao = selecao;
 	}
 }

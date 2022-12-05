@@ -1,6 +1,7 @@
 package app.model.DAO;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -63,7 +64,7 @@ public class TecnicoDao implements tecnicoDaoInter {
 	/**
 	 * Retorna map de tecnicos 
 	 */
-	public Map<Integer, Tecnico> retornaMap() {
-		return tecnicos;
+	public Collection<Tecnico> retornaMap() {
+		return tecnicos.values();
 	}
 }

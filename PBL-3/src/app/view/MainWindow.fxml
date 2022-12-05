@@ -3,46 +3,50 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
+<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
    <left>
-      <VBox prefHeight="428.0" prefWidth="146.0" spacing="12.0" style="-fx-background-color: #009739;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="207.0" spacing="20.0" style="-fx-background-color: #3a0b13;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="SYSCOPA" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#btMenu" text="SYSCOPA" textAlignment="CENTER" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="15.0" />
+                  <Insets />
                </VBox.margin>
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="Segoe UI Black Italic" size="20.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onMouseClicked="#jogador" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #FEDD00;" text="Jogador" textFill="#012169">
+            <Button mnemonicParsing="false" onMouseClicked="#jogador" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Jogador" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#selecao" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #FEDD00;" text="Seleção" textFill="#012169">
+            <Button mnemonicParsing="false" onMouseClicked="#selecao" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Seleção" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#tecnico" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #FEDD00;" text="Técnico" textFill="#012169">
+            <Button mnemonicParsing="false" onMouseClicked="#tecnico" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Técnico" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#arbitro" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #FEDD00;" text="Árbitro" textFill="#012169">
+            <Button mnemonicParsing="false" onMouseClicked="#arbitro" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Árbitro" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #FEDD00;" text="Fase de Grupo" textFill="#012169">
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="15.0" />
                </font>
@@ -51,9 +55,26 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <effect>
+            <DropShadow radius="26.12" spread="0.14" width="85.48">
+               <color>
+                  <Color red="0.22745098173618317" green="0.04313725605607033" blue="0.07450980693101883" />
+               </color>
+            </DropShadow>
+         </effect>
          <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+            <Insets top="10.0" />
          </padding>
       </VBox>
    </left>
+   <center>
+      <ImageView fx:id="img" fitHeight="466.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../Assets/logo%20fifa%20qatar%202022%20png.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </center>
 </BorderPane>
