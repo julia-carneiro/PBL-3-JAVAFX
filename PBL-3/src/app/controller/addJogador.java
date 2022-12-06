@@ -42,13 +42,13 @@ public class addJogador {
 
 	@FXML
 	void btSalvarAction(MouseEvent event) {
-		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelec.getText());
+		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelec.getText().toUpperCase());
 
 		if (selec == null) {
 			try {
 
-				Selecao selecao = new Selecao(this.nomeSelec.getText());
-				Jogador jog = new Jogador(this.nomeJog.getText(), this.posicaoJog.getValue(), selecao);
+				Selecao selecao = new Selecao(this.nomeSelec.getText().toUpperCase());
+				Jogador jog = new Jogador(this.nomeJog.getText().toUpperCase(), this.posicaoJog.getValue(), selecao);
 				// Cria nos DAOS
 				DAO.getSelecDao().create(selecao);
 				DAO.getJogDao().create(jog);
@@ -67,7 +67,7 @@ public class addJogador {
 			}
 		} else {
 			try {
-				Jogador jog = new Jogador(this.nomeJog.getText(), this.posicaoJog.getValue(), selec);
+				Jogador jog = new Jogador(this.nomeJog.getText().toUpperCase(), this.posicaoJog.getValue(), selec);
 				controller.getjogData().add(jog);
 				DAO.getJogDao().create(jog);
 				DAO.getSelecDao().createListJogador(selec, jog);

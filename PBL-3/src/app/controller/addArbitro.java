@@ -30,7 +30,7 @@ public class addArbitro {
 
     @FXML
     void btSalvarAction(MouseEvent event) {
-    	Arbitro arbitro = new Arbitro(this.nomeArb.getText());
+    	Arbitro arbitro = new Arbitro(this.nomeArb.getText().toUpperCase());
     	controller.getArbData().add(arbitro);
     	DAO.getArbitroDao().create(arbitro);
     	stage.close();
