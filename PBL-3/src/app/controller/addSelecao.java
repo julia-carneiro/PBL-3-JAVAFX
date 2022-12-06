@@ -29,8 +29,8 @@ public class addSelecao {
 
 	@FXML
 	void btSalvarAction(MouseEvent event) {
-		if (DAO.getSelecDao().existeSelecao(this.nomeSelecao.getText()) == false) {
-			Selecao selec = new Selecao(this.nomeSelecao.getText());
+		if (DAO.getSelecDao().existeSelecao(this.nomeSelecao.getText().toUpperCase()) == false) {
+			Selecao selec = new Selecao(this.nomeSelecao.getText().toUpperCase());
 			controller.getSelecData().add(selec);
 			try {
 				DAO.getSelecDao().create(selec);

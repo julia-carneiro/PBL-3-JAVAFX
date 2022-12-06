@@ -32,11 +32,16 @@ public class PesquisaSelecao {
     @FXML
     void btPesquisarAction(MouseEvent event) {
     	//int i = this.tabelaAlunos.getSelectionModel().getSelectedIndex();
-    	Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecaoPesquisa.getText());
-    	controller.geTpesquisaData().add(selec);
-    	
+    	Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecaoPesquisa.getText().toUpperCase());
+    	if(selec!=null) {
+    		controller.getPesquisaData().addAll(selec.getJogadores());
+    		if(selec.getTecnico() != null) {
+    			controller.setTexts(selec.getName(), selec.getTecnico().getName());
+    		}else {
+    			controller.setTexts(selec.getName(), "--");
+    		}
+    	}
     	stage.close();
-
     	
     }
 
