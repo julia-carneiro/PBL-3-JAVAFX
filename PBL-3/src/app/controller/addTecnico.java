@@ -33,15 +33,17 @@ public class addTecnico {
 	@FXML
 	void btSalvarAction(MouseEvent event) {
 		//Procura selecao
-		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecTec.getText());
+		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecTec.getText().toUpperCase());
 		if (selec == null) {
 			try {
 				//Adiciona seleção caso não exista ainda
-				Selecao selecao = new Selecao(this.nomeSelecTec.getText());
-				Tecnico tecnico = new Tecnico(this.nomeTec.getText(), selecao);
+				Selecao selecao = new Selecao(this.nomeSelecTec.getText().toUpperCase());
+				Tecnico tecnico = new Tecnico(this.nomeTec.getText().toUpperCase(), selecao);
+				selecao.setTecnico(tecnico);
 				controller.getTecData().add(tecnico);
 				DAO.getTecnicoDao().create(tecnico);
 				DAO.getSelecDao().create(selecao);
+				
 
 			} catch (SelecaoLimiteException e) {
 				// TODO Auto-generated catch block
@@ -50,10 +52,11 @@ public class addTecnico {
 
 		} else {
 			//Caso selecao já tenha tecnico
-			if(selec.getTecnico() != null) {
-				Tecnico tecnico = new Tecnico(this.nomeTec.getText(), selec);
+			if(selec.getTecnico() == null) {
+				Tecnico tecnico = new Tecnico(this.nomeTec.getText().toUpperCase(), selec);
 				controller.getTecData().add(tecnico);
 				DAO.getTecnicoDao().create(tecnico);
+				
 			}
 		}
 

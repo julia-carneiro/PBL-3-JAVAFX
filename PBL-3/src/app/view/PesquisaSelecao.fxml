@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="221.0" prefWidth="360.0" stylesheets="@css/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="app.controller.PesquisaSelecao">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="221.0" prefWidth="360.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.PesquisaSelecao">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -18,7 +18,7 @@
       <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="CENTER" onMouseClicked="#btPesquisarAction" prefHeight="35.0" prefWidth="66.0" styleClass="bt" text="Pesquisar" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <Label alignment="CENTER" onMouseClicked="#btPesquisarAction" prefHeight="35.0" prefWidth="76.0" styleClass="bt" text="Pesquisar" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

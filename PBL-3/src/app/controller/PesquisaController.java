@@ -14,10 +14,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -30,13 +32,20 @@ public class PesquisaController {
     private URL location;
 
     @FXML
-    private TableView<Selecao> pesquisaTabela;
+    private TableView<Jogador> pesquisaTabela;
+    
+    @FXML
+    private Label selecao;
+
+    @FXML
+    private Label tecnico;
 
 	@FXML
-	private ObservableList<Selecao> pesquisaData;
+	private ObservableList<Jogador> pesquisaData;
 
     @FXML
     void btPesquisarAction(MouseEvent event) {
+    	
     	try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/PesquisaSelecao.fxml");
@@ -56,7 +65,8 @@ public class PesquisaController {
 			PesquisaSelecao controller = loader.getController();
 			controller.setDialogStage(stage);
 			controller.setPesquisaController(this);
-
+			
+			pesquisaData.clear();
 			stage.showAndWait();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -64,27 +74,39 @@ public class PesquisaController {
 		}
     }
     
-    public ObservableList<Selecao> geTpesquisaData(){
+    public ObservableList<Jogador> getPesquisaData(){
     	return pesquisaData;
     }
-
+    
+    
+ 
+    
+    public void setTexts(String nomeSelec, String nomeTec) {
+    	selecao.setText(nomeSelec);
+    	tecnico.setText(nomeTec);
+    	
+    }
+    
+   
+    
     @FXML
     void initialize() {
 
 		this.pesquisaData = FXCollections.observableArrayList();
-    	TableColumn nome = new TableColumn("Pesquisa");
-    	TableColumn jogadoreselec = new TableColumn("Jogadores");
-    	TableColumn tecselec = new TableColumn("Tecnico");
-    	
-    	
-    	nome.setCellValueFactory(new PropertyValueFactory<Selecao, String>("name"));
-    	jogadoreselec.setCellValueFactory(new PropertyValueFactory<Selecao, Jogador>("jogadores"));
-    	tecselec.setCellValueFactory(new PropertyValueFactory<Selecao, Tecnico>("tecnico"));
+		
+		TableColumn idJog = new TableColumn("Id");
+		TableColumn nomeJog = new TableColumn("Nome");
+		TableColumn posicao = new TableColumn("Posição");
 
-
-    	this.pesquisaTabela.getColumns().addAll(nome, jogadoreselec, tecselec);
-    	//pesquisa.setCellValueFactory(new PropertyValueFactory<Selecao, Jogador>("jogadores"));
+		idJog.setCellValueFactory(new PropertyValueFactory<Jogador, Integer>("id"));
+		nomeJog.setCellValueFactory(new PropertyValueFactory<Jogador, String>("name"));
+		posicao.setCellValueFactory(new PropertyValueFactory<Jogador, String>("posicao"));
+		
+    
+		this.pesquisaTabela.getColumns().addAll(idJog, nomeJog, posicao);
     	this.pesquisaTabela.setItems(pesquisaData);
+    	
+    	
 
     }
 

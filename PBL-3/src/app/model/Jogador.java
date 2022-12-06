@@ -94,7 +94,7 @@ public class Jogador {
 
 	@Override
 	public String toString() {
-		return "\n\nNome: " + this.name + "\nPosicao: " + this.posicao;
+		return "\n\nNome: " + this.name.toUpperCase() + "\nPosicao: " + this.posicao;
 		
 	}
 	 

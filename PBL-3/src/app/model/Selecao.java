@@ -27,10 +27,9 @@ public class Selecao {
 	public Selecao(String name) {
 		super();
 		this.name = name;
+		
 	}  
-	
 
-	
 	public ObservableList<Jogador> getJogadores() {
 		return FXCollections.observableArrayList(jogadores);
 		//return jogadores; 
