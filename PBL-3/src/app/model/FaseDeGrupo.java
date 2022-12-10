@@ -1,6 +1,7 @@
 package app.model;
  
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ public class FaseDeGrupo {
 	private Map<Integer, Grupos> grupos = new HashMap<Integer, Grupos>();
 	
 	private List<Selecao> selecoes = new ArrayList<Selecao>();
+	
 	
 	/**
 	 * Construtor fase de grupos - cria 8 grupos com 4 selecoes
@@ -101,7 +103,9 @@ public class FaseDeGrupo {
 			
 		}
 	}
-
+	
+	
+	
 	@Override
 	public String toString() {
 		
