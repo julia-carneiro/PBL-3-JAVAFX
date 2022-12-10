@@ -93,7 +93,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#fasedegrupo" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="17.0" />
                </font>
