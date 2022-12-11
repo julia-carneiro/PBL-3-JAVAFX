@@ -20,7 +20,8 @@
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="238.40000610351564" minHeight="10.0" prefHeight="236.8" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="328.79999389648435" minHeight="10.0" prefHeight="240.8" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="328.79999389648435" minHeight="10.0" prefHeight="247.1999938964844" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="328.79999389648435" minHeight="10.0" prefHeight="74.40000610351564" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -30,42 +31,59 @@
                   <Insets />
                </opaqueInsets>
                <padding>
-                  <Insets bottom="82.0" left="5.0" right="5.0" />
+                  <Insets bottom="12.0" left="5.0" right="5.0" />
                </padding>
             </Separator>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="GRUPO C" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
@@ -75,42 +93,59 @@
          <children>
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <padding>
-                  <Insets bottom="82.0" left="5.0" right="5.0" />
+                  <Insets bottom="12.0" left="5.0" right="5.0" />
                </padding>
             </Separator>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="GRUPO D" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="#fcfcfc">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="#fcfcfc">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
@@ -118,31 +153,36 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label fx:id="selecao1" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="GRUPO A" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selecao1" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="selecao2" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label fx:id="selecao2" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="selecao3" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label fx:id="selecao3" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="selecao4" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label fx:id="selecao4" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
@@ -168,7 +208,7 @@
             </VBox>
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <padding>
-                  <Insets bottom="82.0" left="5.0" right="5.0" />
+                  <Insets bottom="12.0" left="5.0" right="5.0" />
                </padding>
             </Separator>
          </children>
@@ -178,31 +218,36 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
          <children>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label fx:id="selecao5" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="GRUPO B" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selecao5" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="selecao6" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label fx:id="selecao6" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="selecao7" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label fx:id="selecao7" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="selecao8" styleClass="bt" stylesheets="@css/style.css" text="Label" textFill="WHITE">
+                  <Label fx:id="selecao8" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
@@ -230,62 +275,119 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label maxHeight="70.0" maxWidth="70.0" styleClass="bt" stylesheets="@css/style.css" text="GRUPO E" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <padding>
-                  <Insets bottom="82.0" left="5.0" right="5.0" />
+                  <Insets bottom="22.0" left="5.0" right="5.0" />
                </padding>
             </Separator>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
-                  <Separator />
-                  <Label text="Label" />
-                  <Separator prefWidth="200.0" />
-                  <Label text="Label" />
-                  <Separator prefWidth="200.0" />
-                  <Label text="Label" />
-                  <Button mnemonicParsing="false" onMouseClicked="#iniciarfase" styleClass="bt" stylesheets="@css/style.css" text="Iniciar Fase de Grupo" textFill="WHITE">
+                  <Label maxHeight="70.0" maxWidth="70.0" styleClass="bt" stylesheets="@css/style.css" text="GRUPO F" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
          </children>
@@ -294,29 +396,60 @@
          <children>
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <padding>
-                  <Insets bottom="82.0" left="5.0" right="5.0" />
+                  <Insets bottom="22.0" left="5.0" right="5.0" />
                </padding>
             </Separator>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label maxHeight="70.0" maxWidth="70.0" styleClass="bt" stylesheets="@css/style.css" text="GRUPO G" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
          </children>
@@ -325,32 +458,68 @@
          <children>
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <padding>
-                  <Insets bottom="82.0" left="5.0" right="5.0" />
+                  <Insets bottom="22.0" left="5.0" right="5.0" />
                </padding>
             </Separator>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label maxHeight="70.0" maxWidth="70.0" styleClass="bt" stylesheets="@css/style.css" text="GRUPO H" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label text="Label" />
+                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator prefWidth="200.0" />
                </children>
             </VBox>
          </children>
       </HBox>
+      <Button mnemonicParsing="false" onMouseClicked="#iniciarfase" styleClass="bt" stylesheets="@css/style.css" text="Iniciar Fase de Grupo" textFill="WHITE" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </GridPane>
