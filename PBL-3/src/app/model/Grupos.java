@@ -21,11 +21,11 @@ public class Grupos {
 	
 	private Map <Integer, Partida> partidas = new HashMap<Integer, Partida>();
 	
-	public List<Selecao> selecoes = new ArrayList<Selecao>();
-	/*private Selecao selecao1;
+	//public List<Selecao> selecoes = new ArrayList<Selecao>();
+	private Selecao selecao1;
 	private Selecao selecao2;
 	private Selecao selecao3;
-	private Selecao selecao4;*/
+	private Selecao selecao4;
 	
 	
 	
@@ -33,28 +33,32 @@ public class Grupos {
 	 * Construtor de Grupos
 	 * @param selecoes
 	 */
-	public Grupos(List<Selecao> selecoes) {
+	public Grupos(Selecao selecao1, Selecao selecao2, Selecao selecao3, Selecao selecao4) {
 		super();
 		/*this.setSelecao1(selecao1);
 		this.setSelecao2(selecao2);
 		this.setSelecao3(selecao3);
 		this.setSelecao4(selecao4);*/
-		this.selecoes = selecoes;
+		//this.selecoes = selecoes;
+		this.selecao1 = selecao1;
+		this.selecao2 = selecao2;
+		this.selecao3 = selecao3;
+		this.selecao4 = selecao4;
 		setId(codGrupo.incrementAndGet());
 		
-		/*Partida partida1 = new Partida(selecao1, selecao2);
+		Partida partida1 = new Partida(selecao1, selecao2);
 		Partida partida2 = new Partida(selecao1, selecao3);
 		Partida partida3 = new Partida(selecao1, selecao4);
 		Partida partida4 = new Partida(selecao2, selecao3);
 		Partida partida5 = new Partida(selecao2, selecao4);
-		Partida partida6 = new Partida(selecao3, selecao4);*/
+		Partida partida6 = new Partida(selecao3, selecao4);
 		
-		Partida partida1 = new Partida(selecoes.get(0), selecoes.get(1));
+		/*Partida partida1 = new Partida(selecoes.get(0), selecoes.get(1));
         Partida partida2 = new Partida(selecoes.get(0), selecoes.get(2));
         Partida partida3 = new Partida(selecoes.get(0), selecoes.get(3));
         Partida partida4 = new Partida(selecoes.get(1), selecoes.get(2));
         Partida partida5 = new Partida(selecoes.get(1), selecoes.get(3));
-        Partida partida6 = new Partida(selecoes.get(2), selecoes.get(3));
+        Partida partida6 = new Partida(selecoes.get(2), selecoes.get(3));*/
         this.partidas.put(partida1.getId(), partida1);
         this.partidas.put(partida2.getId(), partida2);
         this.partidas.put(partida3.getId(), partida3);
@@ -77,40 +81,16 @@ public class Grupos {
 
 
 	
-	public List<Selecao> getSelecoes() {
+	/*public List<Selecao> getSelecoes() {
 		return selecoes;
 	}
 
 	public void setSelecoes(List<Selecao> selecoes) {
 		this.selecoes = selecoes;
-	}
-	
-	public int getId() {
-		return id;
-	}
-
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	/**
-	public void imprime() {
-		for(Selecao item: selecoes) {
-			System.out.println(item.toString());
-			
-		}
 	}*/
 	
 	
-	@Override
-	public String toString() {
-		return "\nId Grupo: " + this.id ;
-	}
-
-
-	/*public Selecao getSelecao1() {
+	public Selecao getSelecao1() {
 		return selecao1;
 	}
 
@@ -147,9 +127,37 @@ public class Grupos {
 
 	public void setSelecao4(Selecao selecao4) {
 		this.selecao4 = selecao4;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	/**
+	public void imprime() {
+		for(Selecao item: selecoes) {
+			System.out.println(item.toString());
+			
+		}
 	}*/
 	
-	public Collection<Selecao> retornaCollection(){
+	
+	@Override
+	public String toString() {
+		return "\nId Grupo: " + this.id ;
+	}
+
+
+	
+	
+	/*public Collection<Selecao> retornaCollection(){
 		return selecoes;
 	}
 
@@ -162,7 +170,7 @@ public class Grupos {
 		
 		return selecoesMap.values();
 		
-	}
+	}*/
 	
 	
 	
