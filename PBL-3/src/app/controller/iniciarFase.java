@@ -43,7 +43,7 @@ public class iniciarFase {
 	@FXML
 	void btAction(MouseEvent event) {
 		int qtdSelecoes = DAO.getSelecDao().retornaListaSelecoes().size();
-		if (qtdSelecoes == 8) {
+		if (qtdSelecoes == 32) {
 			try {
 				FaseDeGrupo fasedegrupo = new FaseDeGrupo(DAO.getSelecDao().retornaListaSelecoes(), DAO.getSelecDao());
 				// controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
@@ -66,13 +66,13 @@ public class iniciarFase {
 
 				controller.setText6(grupo.get(5).getSelecao1().getName(), grupo.get(5).getSelecao2().getName(),
 						grupo.get(5).getSelecao3().getName(), grupo.get(5).getSelecao4().getName());
-				
+
 				controller.setText7(grupo.get(6).getSelecao1().getName(), grupo.get(6).getSelecao2().getName(),
 						grupo.get(6).getSelecao3().getName(), grupo.get(6).getSelecao4().getName());
-				
+
 				controller.setText8(grupo.get(7).getSelecao1().getName(), grupo.get(7).getSelecao2().getName(),
 						grupo.get(7).getSelecao3().getName(), grupo.get(7).getSelecao4().getName());
-				
+				stage.close();
 			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
 				// TODO Auto-generated catch block
 				labelError.setText(e.getMessage());
@@ -80,8 +80,7 @@ public class iniciarFase {
 		} else {
 			labelError.setText("Só é possível iniciar com 32 seleções");
 		}
-		stage.close();
-	}
+			}
 
 	@FXML
 	void btCancelAction(MouseEvent event) {
