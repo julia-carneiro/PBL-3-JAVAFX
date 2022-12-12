@@ -11,9 +11,9 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
+<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainWindow">
    <left>
-      <VBox alignment="TOP_CENTER" prefHeight="554.0" prefWidth="207.0" spacing="20.0" style="-fx-background-color: #3a0b13;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="570.0" prefWidth="207.0" spacing="20.0" style="-fx-background-color: #3a0b13;" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#btMenu" prefHeight="82.0" prefWidth="172.0" style="-fx-background-color: #eeebe7; -fx-background-radius: 0 0 30 30;" text="SYSCOPA" textAlignment="CENTER" textFill="#3a0b13">
                <opaqueInsets>
@@ -94,6 +94,30 @@
                </effect>
             </Button>
             <Button mnemonicParsing="false" onMouseClicked="#fasedegrupo" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Fase de Grupo" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
+                     <color>
+                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#partida" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Partidas" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.38" offsetY="8.0" radius="11.344999999999999">
+                     <color>
+                        <Color red="0.10588235408067703" green="0.007843137718737125" blue="0.007843137718737125" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#fasedegrupo" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Mata-mata" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="17.0" />
                </font>

@@ -96,7 +96,48 @@ public class fasedegrupoController {
 		selecao7.setText(nomeselec7);
 		selecao8.setText(nomeselec8);
 	}
- 
+	
+	public void setText3(String nomeselec9, String nomeselec10, String nomeselec11, String nomeselec12) {
+		selecao5.setText(nomeselec9);
+		selecao6.setText(nomeselec10);
+		selecao7.setText(nomeselec11);
+		selecao8.setText(nomeselec12);
+	}
+	
+	public void setText4(String nomeselec13, String nomeselec14, String nomeselec15, String nomeselec16) {
+		selecao5.setText(nomeselec13);
+		selecao6.setText(nomeselec14);
+		selecao7.setText(nomeselec15);
+		selecao8.setText(nomeselec16);
+	}
+	
+	public void setText5(String nomeselec17, String nomeselec18, String nomeselec19, String nomeselec20) {
+		selecao5.setText(nomeselec17);
+		selecao6.setText(nomeselec18);
+		selecao7.setText(nomeselec19);
+		selecao8.setText(nomeselec20);
+	}
+	
+	public void setText6(String nomeselec21, String nomeselec22, String nomeselec23, String nomeselec24) {
+		selecao5.setText(nomeselec21);
+		selecao6.setText(nomeselec22);
+		selecao7.setText(nomeselec23);
+		selecao8.setText(nomeselec24);
+	}
+	
+	public void setText7(String nomeselec25, String nomeselec26, String nomeselec27, String nomeselec28) {
+		selecao5.setText(nomeselec25);
+		selecao6.setText(nomeselec26);
+		selecao7.setText(nomeselec27);
+		selecao8.setText(nomeselec28);
+	}
+	
+	public void setText8(String nomeselec29, String nomeselec30, String nomeselec31, String nomeselec32) {
+		selecao5.setText(nomeselec29);
+		selecao6.setText(nomeselec30);
+		selecao7.setText(nomeselec31);
+		selecao8.setText(nomeselec32);
+	}
 
     @FXML
     void initialize() {
