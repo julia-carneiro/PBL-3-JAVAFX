@@ -67,8 +67,17 @@ public class MainWindow {
     	loadPage("tecnico");
     }
     
-   
-   
+    @FXML
+    void partida(MouseEvent event) {
+    	loadPage("partida");
+    }
+    
+    
+    @FXML
+    void matamata(MouseEvent event) {
+    	loadPage("matamata");
+    }
+
     private void loadPage(String page) {
     	Parent root = null;
     	try {

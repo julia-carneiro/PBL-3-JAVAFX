@@ -54,6 +54,7 @@ public class addTecnico {
 			//Caso selecao já tenha tecnico
 			if(selec.getTecnico() == null) {
 				Tecnico tecnico = new Tecnico(this.nomeTec.getText().toUpperCase(), selec);
+				selec.setTecnico(tecnico);
 				controller.getTecData().add(tecnico);
 				DAO.getTecnicoDao().create(tecnico);
 				
