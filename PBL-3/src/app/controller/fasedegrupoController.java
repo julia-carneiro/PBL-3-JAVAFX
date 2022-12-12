@@ -2,6 +2,122 @@ package app.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+public class fasedegrupoController {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private Label selecao1;
+
+    @FXML
+    private Label selecao2;
+
+    @FXML
+    private Label selecao3;
+
+    @FXML
+    private Label selecao4;
+    
+    @FXML
+    private Label selecao5;
+
+    @FXML
+    private Label selecao6;
+
+    @FXML
+    private Label selecao7;
+
+    @FXML
+    private Label selecao8;
+    
+    
+    @FXML
+    void iniciarfase(MouseEvent event) {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			URL xmlURL = getClass().getResource("/app/view/iniciarFase.fxml");
+			loader.setLocation(xmlURL);
+
+			Parent parent = loader.load();
+
+			Scene scene = new Scene(parent);
+
+			Stage stage = new Stage();
+			stage.setTitle("Adicione a seleção");
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.centerOnScreen();
+			stage.initModality(Modality.APPLICATION_MODAL);
+
+			iniciarFase controller = loader.getController();
+			controller.setDialogStage(stage);
+			controller.setFaseController(this);
+
+			stage.showAndWait();
+			stage.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+    }
+    
+	@FXML
+	void btFaseDeGrupo(MouseEvent event) {
+
+	}
+    
+    
+	public void setText1(String nomeselec1, String nomeselec2, String nomeselec3, String nomeselec4) {
+		selecao1.setText(nomeselec1);
+		selecao2.setText(nomeselec2);
+		selecao3.setText(nomeselec3);
+		selecao4.setText(nomeselec4);
+	}
+	
+	   
+	public void setText2(String nomeselec5, String nomeselec6, String nomeselec7, String nomeselec8) {
+		selecao5.setText(nomeselec5);
+		selecao6.setText(nomeselec6);
+		selecao7.setText(nomeselec7);
+		selecao8.setText(nomeselec8);
+	}
+ 
+
+    @FXML
+    void initialize() {
+        assert selecao1 != null : "fx:id=\"selecao1\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao2 != null : "fx:id=\"selecao2\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao3 != null : "fx:id=\"selecao3\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao4 != null : "fx:id=\"selecao4\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao5 != null : "fx:id=\"selecao5\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao6 != null : "fx:id=\"selecao6\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao7 != null : "fx:id=\"selecao7\" was not injected: check your FXML file 'testeFXML.fxml'.";
+        assert selecao8 != null : "fx:id=\"selecao8\" was not injected: check your FXML file 'testeFXML.fxml'.";
+
+    }
+
+    
+}
+/*
+package app.controller;
+
+import java.io.IOException;
+import java.net.URL;
 import java.util.Collection;
 import java.util.ResourceBundle;
 
@@ -16,6 +132,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -31,6 +148,19 @@ public class fasedegrupoController {
 	@FXML
 	private URL location;
 
+	@FXML
+	private Label selecao1;
+
+	@FXML
+	private Label selecao2;
+
+	@FXML
+	private Label selecao3;
+
+	@FXML
+	private Label selecao4;
+
+	    
 	@FXML
 	private ComboBox<Grupos> grupos;
 	
@@ -70,6 +200,18 @@ public class fasedegrupoController {
 
 		}
 	}
+    
+	public void setText1(String nomeselec1, String nomeselec2, String nomeselec3, String nomeselec4) {
+		selecao1.setText(nomeselec1);
+		selecao2.setText(nomeselec2);
+		selecao3.setText(nomeselec3);
+		selecao4.setText(nomeselec4);
+
+	}
+ 
+    
+   
+    
 
 	@FXML
 	void initialize() {
@@ -78,10 +220,11 @@ public class fasedegrupoController {
 		TableColumn nomeSelecao = new TableColumn("Nome");
 		TableColumn pontuacao = new TableColumn("Pontuacao");
 		
-		//nomeSelecao.setCellValueFactory(new PropertyValueFactory<Selecao, String>("name"));
+		nomeSelecao.setCellValueFactory(new PropertyValueFactory<Grupos, Selecao>("Selecao1"));
+	
 		pontuacao.setCellValueFactory(new PropertyValueFactory<Selecao, Integer>("pontuacao"));
 		
-		this.grupoTabela.getColumns().addAll(pontuacao);
+		this.grupoTabela.getColumns().addAll(nomeSelecao, pontuacao);
 		this.grupoTabela.setItems(gruposData);
 	}
 	
@@ -95,3 +238,5 @@ public class fasedegrupoController {
 	
 	
 }
+
+*/

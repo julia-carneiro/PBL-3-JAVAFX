@@ -38,9 +38,9 @@ public class FaseDeGrupo {
 	
 		this.selecoes = selecoes;
 
-		Grupos grupo1 = new Grupos(selecoes.subList(0, 4));
-		/*Grupos grupo2 = new Grupos(selecoes.subList(4, 8));
-		Grupos grupo3 = new Grupos(selecoes.subList(8, 12));
+		Grupos grupo1 = new Grupos(selecoes.get(0), selecoes.get(1), selecoes.get(2), selecoes.get(3));
+		Grupos grupo2 = new Grupos(selecoes.get(4), selecoes.get(5), selecoes.get(6), selecoes.get(7));
+		/*Grupos grupo3 = new Grupos(selecoes.subList(8, 12));
 		Grupos grupo4 = new Grupos(selecoes.subList(12, 16));
 		Grupos grupo5 = new Grupos(selecoes.subList(16, 20));
 		Grupos grupo6 = new Grupos(selecoes.subList(20, 24));
@@ -48,9 +48,8 @@ public class FaseDeGrupo {
 		Grupos grupo8 = new Grupos(selecoes.subList(28, 32));*/
 	
 		this.grupos.put(1, grupo1);
-		
-		/*this.grupos.put(2, grupo2);
-		this.grupos.put(3, grupo3);
+		this.grupos.put(2, grupo2);
+		/*this.grupos.put(3, grupo3);
 		this.grupos.put(4, grupo4);
 		this.grupos.put(5, grupo5);
 		this.grupos.put(6, grupo6);

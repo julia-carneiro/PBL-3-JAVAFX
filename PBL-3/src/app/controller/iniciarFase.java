@@ -2,6 +2,8 @@ package app.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import app.model.FaseDeGrupo;
@@ -43,10 +45,20 @@ public class iniciarFase {
 	@FXML
 	void btAction(MouseEvent event) {
 		int qtdSelecoes = DAO.getSelecDao().retornaListaSelecoes().size();
-		if (qtdSelecoes == 4) {
+		if (qtdSelecoes == 8) {
 			try {
 				FaseDeGrupo fasedegrupo = new FaseDeGrupo(DAO.getSelecDao().retornaListaSelecoes(), DAO.getSelecDao());
-				controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
+				//controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
+				List<Grupos> grupo = new ArrayList<Grupos>();
+				grupo.addAll(fasedegrupo.getGrupos().values());
+				controller.setText1(grupo.get(0).getSelecao1().getName(),
+				grupo.get(0).getSelecao2().getName(), 
+				grupo.get(0).getSelecao3().getName(), grupo.get(0).getSelecao4().getName());
+				
+				controller.setText2(grupo.get(1).getSelecao1().getName(), 
+				grupo.get(1).getSelecao2().getName(), 
+				grupo.get(1).getSelecao3().getName(), grupo.get(1).getSelecao4().getName());
+				
 				
 			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
 				// TODO Auto-generated catch block
@@ -55,6 +67,7 @@ public class iniciarFase {
 		} else {
 			labelError.setText("Só é possível iniciar com 32 seleções");
 		}
+		stage.close();
 	}
 
 	@FXML
