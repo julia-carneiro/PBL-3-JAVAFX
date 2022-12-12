@@ -46,7 +46,9 @@ public class iniciarFase {
 		if (qtdSelecoes == 4) {
 			try {
 				FaseDeGrupo fasedegrupo = new FaseDeGrupo(DAO.getSelecDao().retornaListaSelecoes(), DAO.getSelecDao());
-				controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
+				controller.setGruposData(fasedegrupo.getSelecoes());
+				controller.getGruposData().addAll(controller.getGruposData());
+				
 				
 			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
 				// TODO Auto-generated catch block

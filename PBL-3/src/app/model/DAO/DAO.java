@@ -1,10 +1,14 @@
 package app.model.DAO;
 
+import app.model.Exceptions.JogadorSelecaoFGrupoException;
+import app.model.Exceptions.SelecaoInsuficienteException;
+
 public class DAO {
 	private static jogadorDao jogDAO = null;
 	private static SelecaoDao selecDAO = null;
 	private static TecnicoDao tecDAO = null;
 	private static ArbitroDao arbDAO = null;
+	private static app.model.FaseDeGrupo FaseDeGrupo = null;
 
 	public static jogadorDao getJogDao() {
 
@@ -33,6 +37,18 @@ public class DAO {
 			arbDAO = new ArbitroDao();
 		}
 		return arbDAO;
+	}
+	
+	public static app.model.FaseDeGrupo getFaseDeGrupo() {
+		if(FaseDeGrupo == null) {
+			try {
+				FaseDeGrupo = new app.model.FaseDeGrupo(selecDAO.retornaListaSelecoes(), selecDAO);
+			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return FaseDeGrupo;
 	}
 	
 	

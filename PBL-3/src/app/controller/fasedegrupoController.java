@@ -1,27 +1,26 @@
 package app.controller;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.Collection;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import app.model.FaseDeGrupo;
 import app.model.Grupos;
-import app.model.Jogador;
+import app.model.Partida;
 import app.model.Selecao;
 import app.model.DAO.DAO;
+import app.model.Exceptions.JogadorSelecaoFGrupoException;
+import app.model.Exceptions.SelecaoInsuficienteException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 public class fasedegrupoController {
 
@@ -31,67 +30,63 @@ public class fasedegrupoController {
 	@FXML
 	private URL location;
 
+	private static ObservableList<Grupos> grupos;
+	private static ObservableList<Selecao> selecData;
+	private static ObservableList<Partida> partidaData;
+
 	@FXML
-	private ComboBox<Grupos> grupos;
-	
-	@FXML
-	private ObservableList<Grupos> gruposData;
-	
+	private ComboBox<Grupos> cbGrupos;
+
 	@FXML
 	private TableView<Grupos> grupoTabela;
 
 	@FXML
-	void btFaseDeGrupo(MouseEvent event) {
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/iniciarFase.fxml");
-			loader.setLocation(xmlURL);
+	private Label labelError;
 
-			Parent parent = loader.load();
+	@FXML
+	private TableView<Partida> tbPartidas;
 
-			Scene scene = new Scene(parent);
-
-			Stage stage = new Stage();
-			stage.setTitle("Adicione a seleção");
-			stage.setScene(scene);
-			stage.setResizable(false);
-			stage.centerOnScreen();
-			stage.initModality(Modality.APPLICATION_MODAL);
-
-			iniciarFase controller = loader.getController();
-			controller.setDialogStage(stage);
-			controller.setFaseController(this);
-
-			stage.showAndWait();
-			stage.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
+	@FXML
+	void cbAction(ActionEvent event) {
+		if(this.cbGrupos.getValue() == DAO.getFaseDeGrupo().buscaGrupo(1)) {
+			setSelecData(DAO.getFaseDeGrupo().buscaGrupo(1).getSelecoes());
+			
 		}
+	}
+
+	private void setSelecData(List<Selecao> selecoes) {
+		// TODO Auto-generated method stub
+		this.selecData = FXCollections.observableArrayList(selecoes);
+		
+	}
+
+	@FXML
+	void btFaseDeGrupo(MouseEvent event) {
+		
 	}
 
 	@FXML
 	void initialize() {
-		this.gruposData = FXCollections.observableArrayList();
-
+		if (DAO.getSelecDao().retornaListaSelecoes().size() == 4) {
+			try {
+				FaseDeGrupo fasedegrupo = new FaseDeGrupo(DAO.getSelecDao().retornaListaSelecoes(), DAO.getSelecDao());
+				grupos = FXCollections.observableArrayList(fasedegrupo.getGrupos());
+				this.cbGrupos.setItems(grupos);
+			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 		TableColumn nomeSelecao = new TableColumn("Nome");
-		TableColumn pontuacao = new TableColumn("Pontuacao");
+
+		nomeSelecao.setCellValueFactory(new PropertyValueFactory<Selecao, String>("name"));
+
+		this.grupoTabela.getColumns().addAll(nomeSelecao);
 		
-		//nomeSelecao.setCellValueFactory(new PropertyValueFactory<Selecao, String>("name"));
-		pontuacao.setCellValueFactory(new PropertyValueFactory<Selecao, Integer>("pontuacao"));
 		
-		this.grupoTabela.getColumns().addAll(pontuacao);
-		this.grupoTabela.setItems(gruposData);
+		
+		
 	}
-	
-	public ObservableList<Grupos> getGruposData() {
-		return gruposData;
-	}
-	
-	public TableView<Grupos> getGruposTabela() {
-		return grupoTabela;
-	}
-	
-	
+
 }
