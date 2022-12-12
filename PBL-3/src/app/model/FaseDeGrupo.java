@@ -87,8 +87,8 @@ public class FaseDeGrupo {
 		this.selecoes = selecoes;
 	}
 
-	public Map<Integer, Grupos> getGrupos() {
-		return grupos;
+	public Collection<Grupos> getGrupos() {
+		return grupos.values();
 	}
 
 
@@ -103,7 +103,9 @@ public class FaseDeGrupo {
 		}
 	}
 	
-	
+	public Grupos buscaGrupo(int index) {
+		return grupos.get(index);
+	}
 	
 	@Override
 	public String toString() {
