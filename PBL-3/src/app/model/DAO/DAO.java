@@ -39,18 +39,5 @@ public class DAO {
 		return arbDAO;
 	}
 	
-	public static app.model.FaseDeGrupo getFaseDeGrupo() {
-		if(FaseDeGrupo == null) {
-			try {
-				FaseDeGrupo = new app.model.FaseDeGrupo(selecDAO.retornaListaSelecoes(), selecDAO);
-			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return FaseDeGrupo;
-	}
-	
-	
 
 }
