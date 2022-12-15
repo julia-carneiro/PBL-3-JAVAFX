@@ -44,6 +44,36 @@ public class fasedegrupoController {
     @FXML
     private Label selecao8;
     
+    @FXML
+    void visualizarPartida(MouseEvent event) {
+    	try {
+			FXMLLoader loader = new FXMLLoader();
+			URL xmlURL = getClass().getResource("/app/view/visualizarPartida.fxml");
+			loader.setLocation(xmlURL);
+
+			Parent parent = loader.load();
+
+			Scene scene = new Scene(parent);
+
+			Stage stage = new Stage();
+			stage.setTitle("Adicione a seleção");
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.centerOnScreen();
+			stage.initModality(Modality.APPLICATION_MODAL);
+
+			visualizarPartida controller = loader.getController();
+			controller.setDialogStage(stage);
+			controller.setVisualizarController(this);
+
+			stage.showAndWait();
+			stage.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+    }
     
     @FXML
     void iniciarfase(MouseEvent event) {
@@ -141,15 +171,7 @@ public class fasedegrupoController {
 
     @FXML
     void initialize() {
-        assert selecao1 != null : "fx:id=\"selecao1\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao2 != null : "fx:id=\"selecao2\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao3 != null : "fx:id=\"selecao3\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao4 != null : "fx:id=\"selecao4\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao5 != null : "fx:id=\"selecao5\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao6 != null : "fx:id=\"selecao6\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao7 != null : "fx:id=\"selecao7\" was not injected: check your FXML file 'testeFXML.fxml'.";
-        assert selecao8 != null : "fx:id=\"selecao8\" was not injected: check your FXML file 'testeFXML.fxml'.";
-
+      
     }
 
     
