@@ -72,7 +72,6 @@ public class MainWindow {
     	loadPage("partida");
     }
     
-    
     @FXML
     void matamata(MouseEvent event) {
     	loadPage("matamata");

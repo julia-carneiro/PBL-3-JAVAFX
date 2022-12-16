@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.fasedegrupoController">
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="646.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.fasedegrupoController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
@@ -21,7 +21,7 @@
   <rowConstraints>
     <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="236.8" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="247.1999938964844" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="328.79999389648435" minHeight="10.0" prefHeight="74.40000610351564" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="74.40000610351564" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -41,22 +41,22 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao9" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao10" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao11" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao12" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
@@ -88,6 +88,9 @@
                </children>
             </VBox>
          </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
          <children>
@@ -103,22 +106,22 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao13" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao14" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao15" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao16" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
@@ -130,22 +133,26 @@
                   <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
-                     </font></Label>
+                     </font>
+                  </Label>
                   <Separator prefWidth="200.0" />
                   <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="#fcfcfc">
                      <font>
                         <Font size="14.0" />
-                     </font></Label>
+                     </font>
+                  </Label>
                   <Separator prefWidth="200.0" />
                   <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
-                     </font></Label>
+                     </font>
+                  </Label>
                   <Separator prefWidth="200.0" />
                   <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
-                     </font></Label>
+                     </font>
+                  </Label>
                   <Separator prefWidth="200.0" />
                </children>
             </VBox>
@@ -282,22 +289,22 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao17" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao18" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao19" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao20" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
@@ -344,22 +351,22 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao21" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao22" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao23" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao24" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
@@ -406,22 +413,22 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao25" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao26" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao27" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao28" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
@@ -468,22 +475,22 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao29" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao30" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao31" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
                   <Separator prefWidth="200.0" />
-                  <Label styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
+                  <Label fx:id="selecao32" styleClass="bt" stylesheets="@css/style.css" text="---" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
@@ -516,7 +523,7 @@
             </VBox>
          </children>
       </HBox>
-      <Button mnemonicParsing="false" onMouseClicked="#iniciarfase" styleClass="bt" stylesheets="@css/style.css" text="Iniciar Fase de Grupo" textFill="WHITE" GridPane.rowIndex="2">
+      <Button mnemonicParsing="false" onMouseClicked="#iniciarfase" styleClass="bt" stylesheets="@css/style.css" text="Iniciar Fase de Grupo" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
          <font>
             <Font size="14.0" />
          </font>

@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import app.model.FaseDeGrupo;
 import app.model.Grupos;
+import app.model.Main;
 import app.model.Selecao;
 import app.model.DAO.DAO;
 import app.model.Exceptions.JogadorSelecaoFGrupoException;
@@ -39,48 +40,53 @@ public class iniciarFase {
 	private Stage stage;
 
 	private fasedegrupoController controller;
-
+	
 	@FXML
 	void btAction(MouseEvent event) {
 		int qtdSelecoes = DAO.getSelecDao().retornaListaSelecoes().size();
-		if (qtdSelecoes == 8) {
-			try {
-				FaseDeGrupo fasedegrupo = new FaseDeGrupo(DAO.getSelecDao().retornaListaSelecoes(), DAO.getSelecDao());
-				// controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
-				List<Grupos> grupo = new ArrayList<Grupos>();
-				grupo.addAll(fasedegrupo.getGrupos().values());
-				controller.setText1(grupo.get(0).getSelecao1().getName(), grupo.get(0).getSelecao2().getName(),
-						grupo.get(0).getSelecao3().getName(), grupo.get(0).getSelecao4().getName());
+		if (qtdSelecoes == 4) {
+			FaseDeGrupo fasedegrupo = Main.getFaseDeGrupo();
+			// controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
+			List<Grupos> grupo = new ArrayList<Grupos>();
+			grupo.addAll(fasedegrupo.getGrupos().values());
+			controller.setText1(grupo.get(0).getSelecao1().getName(), grupo.get(0).getSelecao2().getName(),
+					grupo.get(0).getSelecao3().getName(), grupo.get(0).getSelecao4().getName());
 
-				controller.setText2(grupo.get(1).getSelecao1().getName(), grupo.get(1).getSelecao2().getName(),
-						grupo.get(1).getSelecao3().getName(), grupo.get(1).getSelecao4().getName());
-
-				controller.setText3(grupo.get(2).getSelecao1().getName(), grupo.get(2).getSelecao2().getName(),
-						grupo.get(2).getSelecao3().getName(), grupo.get(2).getSelecao4().getName());
-
-				controller.setText4(grupo.get(3).getSelecao1().getName(), grupo.get(3).getSelecao2().getName(),
-						grupo.get(3).getSelecao3().getName(), grupo.get(3).getSelecao4().getName());
-
-				controller.setText5(grupo.get(4).getSelecao1().getName(), grupo.get(4).getSelecao2().getName(),
-						grupo.get(4).getSelecao3().getName(), grupo.get(4).getSelecao4().getName());
-
-				controller.setText6(grupo.get(5).getSelecao1().getName(), grupo.get(5).getSelecao2().getName(),
-						grupo.get(5).getSelecao3().getName(), grupo.get(5).getSelecao4().getName());
-				
-				controller.setText7(grupo.get(6).getSelecao1().getName(), grupo.get(6).getSelecao2().getName(),
-						grupo.get(6).getSelecao3().getName(), grupo.get(6).getSelecao4().getName());
-				
-				controller.setText8(grupo.get(7).getSelecao1().getName(), grupo.get(7).getSelecao2().getName(),
-						grupo.get(7).getSelecao3().getName(), grupo.get(7).getSelecao4().getName());
-				
-			} catch (JogadorSelecaoFGrupoException | SelecaoInsuficienteException e) {
-				// TODO Auto-generated catch block
-				labelError.setText(e.getMessage());
-			}
+			/*
+			 * controller.setText2(grupo.get(1).getSelecao1().getName(),
+			 * grupo.get(1).getSelecao2().getName(), grupo.get(1).getSelecao3().getName(),
+			 * grupo.get(1).getSelecao4().getName());
+			 * 
+			 * controller.setText3(grupo.get(2).getSelecao1().getName(),
+			 * grupo.get(2).getSelecao2().getName(), grupo.get(2).getSelecao3().getName(),
+			 * grupo.get(2).getSelecao4().getName());
+			 * 
+			 * controller.setText4(grupo.get(3).getSelecao1().getName(),
+			 * grupo.get(3).getSelecao2().getName(), grupo.get(3).getSelecao3().getName(),
+			 * grupo.get(3).getSelecao4().getName());
+			 * 
+			 * controller.setText5(grupo.get(4).getSelecao1().getName(),
+			 * grupo.get(4).getSelecao2().getName(), grupo.get(4).getSelecao3().getName(),
+			 * grupo.get(4).getSelecao4().getName());
+			 * 
+			 * controller.setText6(grupo.get(5).getSelecao1().getName(),
+			 * grupo.get(5).getSelecao2().getName(), grupo.get(5).getSelecao3().getName(),
+			 * grupo.get(5).getSelecao4().getName());
+			 * 
+			 * controller.setText7(grupo.get(6).getSelecao1().getName(),
+			 * grupo.get(6).getSelecao2().getName(), grupo.get(6).getSelecao3().getName(),
+			 * grupo.get(6).getSelecao4().getName());
+			 * 
+			 * controller.setText8(grupo.get(7).getSelecao1().getName(),
+			 * grupo.get(7).getSelecao2().getName(), grupo.get(7).getSelecao3().getName(),
+			 * grupo.get(7).getSelecao4().getName());
+			 */
+			stage.close();
 		} else {
 			labelError.setText("Só é possível iniciar com 32 seleções");
 		}
-		stage.close();
+		
+		
 	}
 
 	@FXML
@@ -88,10 +94,7 @@ public class iniciarFase {
 		stage.close();
 	}
 
-	@FXML
-	void initialize() {
-
-	}
+	
 
 	public void setDialogStage(Stage stage) {
 		// TODO Auto-generated method stub

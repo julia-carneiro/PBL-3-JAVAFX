@@ -1,10 +1,14 @@
 package app.model.DAO;
 
+import app.model.Exceptions.JogadorSelecaoFGrupoException;
+import app.model.Exceptions.SelecaoInsuficienteException;
+
 public class DAO {
 	private static jogadorDao jogDAO = null;
 	private static SelecaoDao selecDAO = null;
 	private static TecnicoDao tecDAO = null;
 	private static ArbitroDao arbDAO = null;
+	
 
 	public static jogadorDao getJogDao() {
 
@@ -34,7 +38,6 @@ public class DAO {
 		}
 		return arbDAO;
 	}
-	
 	
 
 }
