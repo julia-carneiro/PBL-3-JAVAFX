@@ -8,7 +8,7 @@ public class DAO {
 	private static SelecaoDao selecDAO = null;
 	private static TecnicoDao tecDAO = null;
 	private static ArbitroDao arbDAO = null;
-	private static app.model.FaseDeGrupo FaseDeGrupo = null;
+	
 
 	public static jogadorDao getJogDao() {
 

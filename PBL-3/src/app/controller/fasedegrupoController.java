@@ -3,6 +3,8 @@ package app.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import app.model.FaseDeGrupo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -43,37 +45,78 @@ public class fasedegrupoController {
 
     @FXML
     private Label selecao8;
+
+    @FXML
+    private Label selecao9;
     
     @FXML
-    void visualizarPartida(MouseEvent event) {
-    	try {
-			FXMLLoader loader = new FXMLLoader();
-			URL xmlURL = getClass().getResource("/app/view/visualizarPartida.fxml");
-			loader.setLocation(xmlURL);
+    private Label selecao10;
 
-			Parent parent = loader.load();
+    @FXML
+    private Label selecao11;
 
-			Scene scene = new Scene(parent);
+    @FXML
+    private Label selecao12;
 
-			Stage stage = new Stage();
-			stage.setTitle("Adicione a seleção");
-			stage.setScene(scene);
-			stage.setResizable(false);
-			stage.centerOnScreen();
-			stage.initModality(Modality.APPLICATION_MODAL);
+    @FXML
+    private Label selecao13;
 
-			visualizarPartida controller = loader.getController();
-			controller.setDialogStage(stage);
-			controller.setVisualizarController(this);
+    @FXML
+    private Label selecao14;
 
-			stage.showAndWait();
-			stage.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+    @FXML
+    private Label selecao15;
 
-		}
-    }
+    @FXML
+    private Label selecao16;
+
+    @FXML
+    private Label selecao17;
+
+    @FXML
+    private Label selecao18;
+
+    @FXML
+    private Label selecao19;
+
+    @FXML
+    private Label selecao20;
+
+    @FXML
+    private Label selecao21;
+
+    @FXML
+    private Label selecao22;
+
+    @FXML
+    private Label selecao23;
+
+    @FXML
+    private Label selecao24;
+
+    @FXML
+    private Label selecao25;
+
+    @FXML
+    private Label selecao26;
+
+    @FXML
+    private Label selecao27;
+
+    @FXML
+    private Label selecao28;
+
+    @FXML
+    private Label selecao29;
+
+    @FXML
+    private Label selecao30;
+
+    @FXML
+    private Label selecao31;
+
+    @FXML
+    private Label selecao32;
     
     @FXML
     void iniciarfase(MouseEvent event) {
@@ -105,11 +148,7 @@ public class fasedegrupoController {
 
 		}
     }
-    
-	@FXML
-	void btFaseDeGrupo(MouseEvent event) {
 
-	}
     
     
 	public void setText1(String nomeselec1, String nomeselec2, String nomeselec3, String nomeselec4) {
@@ -128,52 +167,59 @@ public class fasedegrupoController {
 	}
 	
 	public void setText3(String nomeselec9, String nomeselec10, String nomeselec11, String nomeselec12) {
-		selecao5.setText(nomeselec9);
-		selecao6.setText(nomeselec10);
-		selecao7.setText(nomeselec11);
-		selecao8.setText(nomeselec12);
+		selecao9.setText(nomeselec9);
+		selecao10.setText(nomeselec10);
+		selecao11.setText(nomeselec11);
+		selecao12.setText(nomeselec12);
 	}
 	
 	public void setText4(String nomeselec13, String nomeselec14, String nomeselec15, String nomeselec16) {
-		selecao5.setText(nomeselec13);
-		selecao6.setText(nomeselec14);
-		selecao7.setText(nomeselec15);
-		selecao8.setText(nomeselec16);
+		selecao13.setText(nomeselec13);
+		selecao14.setText(nomeselec14);
+		selecao15.setText(nomeselec15);
+		selecao16.setText(nomeselec16);
 	}
 	
 	public void setText5(String nomeselec17, String nomeselec18, String nomeselec19, String nomeselec20) {
-		selecao5.setText(nomeselec17);
-		selecao6.setText(nomeselec18);
-		selecao7.setText(nomeselec19);
-		selecao8.setText(nomeselec20);
+		selecao17.setText(nomeselec17);
+		selecao18.setText(nomeselec18);
+		selecao19.setText(nomeselec19);
+		selecao20.setText(nomeselec20);
 	}
 	
 	public void setText6(String nomeselec21, String nomeselec22, String nomeselec23, String nomeselec24) {
-		selecao5.setText(nomeselec21);
-		selecao6.setText(nomeselec22);
-		selecao7.setText(nomeselec23);
-		selecao8.setText(nomeselec24);
+		selecao21.setText(nomeselec21);
+		selecao22.setText(nomeselec22);
+		selecao23.setText(nomeselec23);
+		selecao24.setText(nomeselec24);
 	}
 	
 	public void setText7(String nomeselec25, String nomeselec26, String nomeselec27, String nomeselec28) {
-		selecao5.setText(nomeselec25);
-		selecao6.setText(nomeselec26);
-		selecao7.setText(nomeselec27);
-		selecao8.setText(nomeselec28);
+		selecao25.setText(nomeselec25);
+		selecao26.setText(nomeselec26);
+		selecao27.setText(nomeselec27);
+		selecao28.setText(nomeselec28);
 	}
 	
 	public void setText8(String nomeselec29, String nomeselec30, String nomeselec31, String nomeselec32) {
-		selecao5.setText(nomeselec29);
-		selecao6.setText(nomeselec30);
-		selecao7.setText(nomeselec31);
-		selecao8.setText(nomeselec32);
+		selecao29.setText(nomeselec29);
+		selecao30.setText(nomeselec30);
+		selecao31.setText(nomeselec31);
+		selecao32.setText(nomeselec32);
 	}
 
     @FXML
     void initialize() {
       
     }
-
+    
+    /*public void setFaseDeGrupo(FaseDeGrupo fasedegrupo) {
+		this.fasedegrupo = fasedegrupo;
+	}
+    
+    public FaseDeGrupo getFaseDeGrupo() {
+		return fasedegrupo;	
+	}*/
     
 }
 /*

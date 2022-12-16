@@ -14,11 +14,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  */
 public class Grupos {
-	
 	private static AtomicInteger codGrupo = new AtomicInteger();
 	private int id;
-	
-	
+
 	private Map <Integer, Partida> partidas = new HashMap<Integer, Partida>();
 	
 	//public List<Selecao> selecoes = new ArrayList<Selecao>();
@@ -26,8 +24,6 @@ public class Grupos {
 	private Selecao selecao2;
 	private Selecao selecao3;
 	private Selecao selecao4;
-	
-	
 	
 	/**
 	 * Construtor de Grupos
@@ -43,7 +39,7 @@ public class Grupos {
 		this.selecao1 = selecao1;
 		this.selecao2 = selecao2;
 		this.selecao3 = selecao3;
-		this.selecao4 = selecao4;
+		this.selecao4 = selecao4; 
 		setId(codGrupo.incrementAndGet());
 		
 		Partida partida1 = new Partida(selecao1, selecao2);
