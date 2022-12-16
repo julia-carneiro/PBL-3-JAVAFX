@@ -17,7 +17,7 @@ import app.model.Exceptions.SelecaoInsuficienteException;
  */
 public class FaseDeGrupo {
 	
-	private Map<Integer, Grupos> grupos = new HashMap<Integer, Grupos>();
+	private Map<String, Grupos> grupos = new HashMap<String, Grupos>();
 	
 	private List<Selecao> selecoes = new ArrayList<Selecao>();
 	
@@ -39,7 +39,7 @@ public class FaseDeGrupo {
 		this.selecoes = selecoes;
 
 		Grupos grupo1 = new Grupos(selecoes.get(0), selecoes.get(1), selecoes.get(2), selecoes.get(3));
-		Grupos grupo2 = new Grupos(selecoes.get(4), selecoes.get(5), selecoes.get(6), selecoes.get(7));
+		//Grupos grupo2 = new Grupos(selecoes.get(4), selecoes.get(5), selecoes.get(6), selecoes.get(7));
 		/*Grupos grupo3 = new Grupos(selecoes.subList(8, 12));
 		Grupos grupo4 = new Grupos(selecoes.subList(12, 16));
 		Grupos grupo5 = new Grupos(selecoes.subList(16, 20));
@@ -47,8 +47,8 @@ public class FaseDeGrupo {
 		Grupos grupo7 = new Grupos(selecoes.subList(24, 28));
 		Grupos grupo8 = new Grupos(selecoes.subList(28, 32));*/
 	
-		this.grupos.put(1, grupo1);
-		this.grupos.put(2, grupo2);
+		this.grupos.put("A", grupo1);
+		//this.grupos.put(2, grupo2);
 		/*this.grupos.put(3, grupo3);
 		this.grupos.put(4, grupo4);
 		this.grupos.put(5, grupo5);
@@ -87,12 +87,12 @@ public class FaseDeGrupo {
 		this.selecoes = selecoes;
 	}
 
-	public Map<Integer, Grupos> getGrupos() {
+	public Map<String, Grupos> getGrupos() {
 		return grupos;
 	}
 
 
-	public void setGrupos(Map<Integer, Grupos> grupos) {
+	public void setGrupos(Map<String, Grupos> grupos) {
 		this.grupos = grupos;
 	}
 
