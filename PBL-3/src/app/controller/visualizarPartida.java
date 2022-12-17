@@ -71,7 +71,9 @@ public class visualizarPartida {
     void btPesquisar(MouseEvent event) {
     	String id = idGrupo.getText().toUpperCase();
     	Grupos grupo = Main.getFaseDeGrupo().getGrupos().get(id);
- 
+    	
+    	
+    	
     	if(grupo == null) {
     		labelError.setText("Grupo inexistente");
     		p1s1.setText("--");
@@ -93,6 +95,8 @@ public class visualizarPartida {
 	    	p6s2.setText("--");
     		
     	}else {
+    		// Seta as possiveis partidas na interface 
+    		
 	    	Map <Integer, Partida> partidas = grupo.getPartidas();
 	    	System.out.println(partidas);
 	    	p1s1.setText(partidas.get(1).getSelecao1().getName());

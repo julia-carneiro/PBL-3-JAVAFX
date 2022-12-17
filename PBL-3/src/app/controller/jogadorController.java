@@ -128,10 +128,9 @@ public class jogadorController {
 
 	@FXML
 	void initialize() {
+		// Inicializa a tabela de jogadores com os IDs, nomes, posição, e Seleções 
 		
 		this.jogData = FXCollections.observableArrayList();
-		
-
 		TableColumn idJog = new TableColumn("Id");
 		TableColumn nomeJog = new TableColumn("Nome");
 		TableColumn posicao = new TableColumn("Posição");

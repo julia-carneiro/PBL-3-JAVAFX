@@ -42,14 +42,16 @@ public class addJogador {
 
 	@FXML
 	void btSalvarAction(MouseEvent event) {
+		// Encontra uma seleção a partir do seu nome.
 		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelec.getText().toUpperCase());
 
+		
 		if (selec == null) {
 			try {
-
+				// Cria um jogador e a seleção do jogador, caso ela não exista
 				Selecao selecao = new Selecao(this.nomeSelec.getText().toUpperCase());
 				Jogador jog = new Jogador(this.nomeJog.getText().toUpperCase(), this.posicaoJog.getValue(), selecao);
-				// Cria nos DAOS
+				// Adiciona nos DAOS
 				DAO.getSelecDao().create(selecao);
 				DAO.getJogDao().create(jog);
 				try {
@@ -66,6 +68,7 @@ public class addJogador {
 				e.printStackTrace();
 			}
 		} else {
+			// Cria o o jogador e adiciona ele na seleção ja existente
 			try {
 				Jogador jog = new Jogador(this.nomeJog.getText().toUpperCase(), this.posicaoJog.getValue(), selec);
 				controller.getjogData().add(jog);
@@ -85,9 +88,11 @@ public class addJogador {
 	void setJogadorController(jogadorController controller) {
 		this.controller = controller;
 	}
-
+	
+	
 	@FXML
 	void initialize() {
+		//Adiciona a lista de posições no combo box
 		posicaoJog.getItems().addAll(Posicoes.posicoes);
 	}
 

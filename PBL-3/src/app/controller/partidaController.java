@@ -3,10 +3,15 @@ package app.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import app.model.Jogador;
+import app.model.Selecao;
+import app.model.DAO.DAO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -20,6 +25,13 @@ public class partidaController {
     private URL location;
 
 	private Stage stage;
+	
+	@FXML
+	private ComboBox<Jogador> listajogador1;
+	
+	@FXML
+	private ComboBox<Jogador> listajogador2;
+	
 
 	private fasedegrupoController controller;
     
@@ -55,7 +67,8 @@ public class partidaController {
     }
 
     @FXML
-    void initialize() {
+    void initialize() {	
+    	
 
     }
     

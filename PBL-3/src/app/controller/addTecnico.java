@@ -36,7 +36,7 @@ public class addTecnico {
 		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecTec.getText().toUpperCase());
 		if (selec == null) {
 			try {
-				//Adiciona seleção caso não exista ainda
+				//Cria tecnico e a seleção caso não exista ainda
 				Selecao selecao = new Selecao(this.nomeSelecTec.getText().toUpperCase());
 				Tecnico tecnico = new Tecnico(this.nomeTec.getText().toUpperCase(), selecao);
 				selecao.setTecnico(tecnico);
@@ -51,7 +51,7 @@ public class addTecnico {
 			}
 
 		} else {
-			//Caso selecao já tenha tecnico
+			//Caso selecao não tenha tecnico cria e adiciona
 			if(selec.getTecnico() == null) {
 				Tecnico tecnico = new Tecnico(this.nomeTec.getText().toUpperCase(), selec);
 				selec.setTecnico(tecnico);

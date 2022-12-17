@@ -3,6 +3,10 @@ package app.model.DAO;
 import app.model.Exceptions.JogadorSelecaoFGrupoException;
 import app.model.Exceptions.SelecaoInsuficienteException;
 
+
+
+// Classe DAO usada para acessar todos os DAOs do programa.
+
 public class DAO {
 	private static jogadorDao jogDAO = null;
 	private static SelecaoDao selecDAO = null;

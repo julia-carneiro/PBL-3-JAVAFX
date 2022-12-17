@@ -29,6 +29,7 @@ public class addSelecao {
 
 	@FXML
 	void btSalvarAction(MouseEvent event) {
+		//Cria a seleção caso ela não exista
 		if (DAO.getSelecDao().existeSelecao(this.nomeSelecao.getText().toUpperCase()) == false) {
 			Selecao selec = new Selecao(this.nomeSelecao.getText().toUpperCase());
 			controller.getSelecData().add(selec);
@@ -39,8 +40,7 @@ public class addSelecao {
 				e.printStackTrace();
 			}
 		}
-		// Debug
-		System.out.println(DAO.getSelecDao().retornaListaSelecoes());
+
 		stage.close();
 
 	}

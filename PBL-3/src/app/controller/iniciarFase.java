@@ -43,12 +43,17 @@ public class iniciarFase {
 	
 	@FXML
 	void btAction(MouseEvent event) {
+		//Pega a quantas seleções tem na copa
 		int qtdSelecoes = DAO.getSelecDao().retornaListaSelecoes().size();
+		
+		// Se caso a quantidade seleção seja a adequadra cria a fase de grupo
 		if (qtdSelecoes == 4) {
 			FaseDeGrupo fasedegrupo = Main.getFaseDeGrupo();
-			// controller.getGruposData().addAll(fasedegrupo.getGrupos().values());
+			//Lista dos 8 grupos da copa
 			List<Grupos> grupo = new ArrayList<Grupos>();
 			grupo.addAll(fasedegrupo.getGrupos().values());
+			
+			// Seta as seleções para aparecer na interface 
 			controller.setText1(grupo.get(0).getSelecao1().getName(), grupo.get(0).getSelecao2().getName(),
 					grupo.get(0).getSelecao3().getName(), grupo.get(0).getSelecao4().getName());
 
@@ -88,7 +93,8 @@ public class iniciarFase {
 		
 		
 	}
-
+	
+	// Caso a ação seja cancelada fecha a janela
 	@FXML
 	void btCancelAction(MouseEvent event) {
 		stage.close();
