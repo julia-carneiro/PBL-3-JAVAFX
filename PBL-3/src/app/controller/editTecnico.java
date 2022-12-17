@@ -33,17 +33,23 @@ public class editTecnico {
 
 	@FXML
     void btSalvarAction(MouseEvent event) {
+
 		//Pega index do tecnico selecionada na tabela
+
     	int i = this.controller.getTecTabela().getSelectionModel().getSelectedIndex();
+    	
     	if(i>=0){
+    		// Busca o tecnico e sua seleção nos respectivos DAOs
 	    	Tecnico tecnico = DAO.getTecnicoDao().findByIdTec(this.controller.getTecData().get(i).getId());
 	    	Selecao selec = DAO.getSelecDao().findByName(this.editNomeTec.getText());
 	    	if(selec == null) {
 				try {
+
 					//Edita na selecao
 					Selecao selecao = new Selecao(this.editNomeSelecTec.getText());
 					DAO.getSelecDao().create(selecao);
 					//Seta novo nome e selecao
+
 					tecnico.setName(this.editNomeTec.getText());
 		    		tecnico.setSelecao(selecao);
 		    		controller.getTecData().set(i, tecnico);
@@ -67,11 +73,9 @@ public class editTecnico {
 	    	//Seta o novo objeto na observableList
 	    	
 	    	
-	    	//Edita o tecnico no DAO
-	    	//DAO.getTecnicoDao().update(this.controller.getTecData().get(i).getId(), tecnico);
+
     	}
-    	//Debug
-    	System.out.println(DAO.getTecnicoDao().retornaMap());
+
     	stage.close();
     }
 

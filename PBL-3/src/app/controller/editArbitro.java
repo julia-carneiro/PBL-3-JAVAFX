@@ -28,7 +28,9 @@ public class editArbitro {
 
     @FXML
     void btSalvarAction(MouseEvent event) {
+    	//posição do arbitro na tabela
     	int i = this.controller.getArbTabela().getSelectionModel().getSelectedIndex();
+  
     	Arbitro arbitro = DAO.getArbitroDao().findByIdArb(this.controller.getArbData().get(i).getId());
     	//Seta novo nome
     	arbitro.setName(this.editNomeArb.getText());

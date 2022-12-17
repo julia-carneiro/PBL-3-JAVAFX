@@ -127,6 +127,9 @@ public class tecnicoController {
     
     @FXML
     void initialize() {
+    	
+    	// Inicializa a tabela de tecnico na interface 
+    	
     	this.tecData = FXCollections.observableArrayList();
     	
     	TableColumn idTec = new TableColumn("Id");

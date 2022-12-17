@@ -22,13 +22,15 @@ import app.model.Interface.SelecaoDaoInter;
  */
 public class SelecaoDao implements SelecaoDaoInter {
 	private Map <String, Selecao> selecoes = new HashMap<>();
-	public List<Jogador> listajogadores = new ArrayList<Jogador>();
+	public  List<Jogador> listajogadores = new ArrayList<Jogador>();
 	
 	/**
 	 * Cria a selecao no map, com seu nome sendo a chave e o objeto como valor.
 	 * @param selecao
 	 * @throws SelecaoLimiteException 
 	 */
+	
+
  
 	@Override
 	public void create(Selecao selecao) throws SelecaoLimiteException {
@@ -145,10 +147,12 @@ public class SelecaoDao implements SelecaoDaoInter {
 		}
 		return false;
 	}
+
 	
 	//Retorna jogador na posicaoo desejada
 	public Jogador getJog(int posicaoLista) {
 		return listajogadores.get(posicaoLista);
 	}
+
 }
 	

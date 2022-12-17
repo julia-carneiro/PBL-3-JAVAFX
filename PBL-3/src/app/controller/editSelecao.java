@@ -28,15 +28,21 @@ public class editSelecao {
 
     @FXML
     void btSalvarAction(MouseEvent event) {
+
     	//Pega index da selecao selecionada na tabela
+
     	int i = this.controller.getSelecTabela().getSelectionModel().getSelectedIndex();
+    	
+    	// Encontra a seleção atraves do nome no DAO
     	Selecao selec = DAO.getSelecDao().findByName(this.controller.getSelecData().get(i).getName());
+    	
     	//Pega nome da tabela, nome pra edição e objeto selecao
     	DAO.getSelecDao().update(this.controller.getSelecData().get(i).getName(), editNomeSelecao.getText(), selec);
     	controller.getSelecData().set(i, selec);
+    	
+    	// Seta uma nova informação da seleção
     	selec.setName(this.editNomeSelecao.getText());
-    	//Debug
-    	System.out.println(DAO.getSelecDao().retornaMap());
+    
     	stage.close();
     }
 

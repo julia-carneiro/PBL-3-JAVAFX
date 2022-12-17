@@ -29,13 +29,18 @@ public class PesquisaSelecao {
 
 	private Stage stage;
 
+	
     @FXML
     void btPesquisarAction(MouseEvent event) {
     	//Pesquisa selecao por nome 
+
     	Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecaoPesquisa.getText().toUpperCase());
+    	
     	if(selec!=null) {
     		controller.getPesquisaData().addAll(selec.getJogadores());
+
     		if(selec.getTecnico() != null){
+
     			controller.setTexts(selec.getName(), selec.getTecnico().getName());
     		}else {
     			controller.setTexts(selec.getName(), "--");

@@ -28,11 +28,16 @@ public class editJogador {
 
 	private jogadorController controller;
 
+	
 	@FXML
 	void btSalvarAction(MouseEvent event) {
+
 		//Pega index do jogador selecionado na ta
+
 		int i = this.controller.getJogTabela().getSelectionModel().getSelectedIndex();
+		
 		if (i >= 0) {
+			// Busca o jogador e a seleção nos seus respectivos DAOs
 			Jogador jog = DAO.getJogDao().findByCodjog(this.controller.getjogData().get(i).getId());
 			Selecao selec = DAO.getSelecDao().findByName(this.nomeSelec.getText());
 			if (selec == null) {
@@ -65,6 +70,7 @@ public class editJogador {
 				}
 				System.out.println(DAO.getJogDao().retornaMap());
 			}else {
+				//Seta novas informações
 				jog.setName(this.editNomeJog.getText());
 				jog.setPosicao(this.posicaoJog.getValue());
 				jog.setSelecao(selec);

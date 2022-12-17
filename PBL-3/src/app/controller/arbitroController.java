@@ -32,7 +32,9 @@ public class arbitroController {
 	private TableView<Arbitro> arbitroTabela;
 
 	private ObservableList<Arbitro> arbData;
+
 	
+
 	@FXML
 	void btAddAction(MouseEvent event) {
 		//Abre tela pop up para ADD arbitro
@@ -63,6 +65,7 @@ public class arbitroController {
 		}
 	}
 
+	//Botão de ação para editar arbitro
 	@FXML
 	void btEditAction(MouseEvent event) {
 		//Abre tela pop up para editar arbitro
@@ -92,7 +95,8 @@ public class arbitroController {
 			e.printStackTrace();
 		}
 	}
-
+	
+	// Botão de ação para remover arbitro
 	@FXML
 	void btRemoveAction(MouseEvent event) {
 		//Abre tela pop up para excluir arbitro
@@ -125,7 +129,9 @@ public class arbitroController {
 
 	@FXML
 	void initialize() {
+
 		
+
 		this.arbData = FXCollections.observableArrayList();
 
 		TableColumn idArb = new TableColumn("Id");

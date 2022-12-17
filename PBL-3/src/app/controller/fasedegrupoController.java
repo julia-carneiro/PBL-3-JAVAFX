@@ -151,7 +151,9 @@ public class fasedegrupoController {
     }
 
     
+
     //Seta os labels das selecoes na fase de grupo
+
     
 	public void setText1(String nomeselec1, String nomeselec2, String nomeselec3, String nomeselec4) {
 		selecao1.setText(nomeselec1);
@@ -214,6 +216,8 @@ public class fasedegrupoController {
     void initialize() {
       
     }
+
     
     
 }
+

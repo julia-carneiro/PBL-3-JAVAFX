@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 import app.model.Grupos;
 import app.model.Jogador;
 import app.model.Main;
 import app.model.Partida;
 import app.model.Posicoes;
+
 import app.model.Selecao;
 import app.model.DAO.DAO;
 import javafx.fxml.FXML;
@@ -16,7 +18,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+
+
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -30,6 +33,13 @@ public class partidaController {
 	private URL location;
 
 	private Stage stage;
+	
+	@FXML
+	private ComboBox<Jogador> listajogador1;
+	
+	@FXML
+	private ComboBox<Jogador> listajogador2;
+	
 
 	private fasedegrupoController controller;
 
@@ -115,6 +125,7 @@ public class partidaController {
 		}
 	}
 
+
 	@FXML
 	void initialize() {
 		/*String id = codGrupo.getText();
@@ -125,6 +136,7 @@ public class partidaController {
 		cbJog1.getItems().addAll(partida.getSelecao1().getJogadores());
 		//cbJog2.getItems().add(partida.getSelecao2().getJogadores());*/
 	}
+
 
 	public void setDialogStage(Stage stage) {
 		// TODO Auto-generated method stub

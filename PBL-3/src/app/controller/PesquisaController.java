@@ -91,9 +91,9 @@ public class PesquisaController {
     
     @FXML
     void initialize() {
-
+    	// Inicializa a tabela na interface de pesquisa
+    	
 		this.pesquisaData = FXCollections.observableArrayList();
-		
 		TableColumn idJog = new TableColumn("Id");
 		TableColumn nomeJog = new TableColumn("Nome");
 		TableColumn posicao = new TableColumn("Posição");
