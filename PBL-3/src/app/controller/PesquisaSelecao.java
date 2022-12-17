@@ -31,11 +31,11 @@ public class PesquisaSelecao {
 
     @FXML
     void btPesquisarAction(MouseEvent event) {
-    	//int i = this.tabelaAlunos.getSelectionModel().getSelectedIndex();
+    	//Pesquisa selecao por nome 
     	Selecao selec = DAO.getSelecDao().findByName(this.nomeSelecaoPesquisa.getText().toUpperCase());
     	if(selec!=null) {
     		controller.getPesquisaData().addAll(selec.getJogadores());
-    		if(selec.getTecnico() != null) {
+    		if(selec.getTecnico() != null){
     			controller.setTexts(selec.getName(), selec.getTecnico().getName());
     		}else {
     			controller.setTexts(selec.getName(), "--");
