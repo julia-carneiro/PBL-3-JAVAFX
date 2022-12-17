@@ -37,6 +37,7 @@ public class tecnicoController {
     
     @FXML
     void btAddAction(MouseEvent event) {
+    	//Abre tela pop up para add tecnico
     	try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/addTecnico.fxml");
@@ -66,6 +67,7 @@ public class tecnicoController {
 
     @FXML
     void btEditAction(MouseEvent event) {
+    	//Abre tela pop up para edit tecnico
     	try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/editTecnico.fxml");
@@ -95,6 +97,7 @@ public class tecnicoController {
 
     @FXML
     void btRemoveAction(MouseEvent event) {
+    	//Abre tela pop up para remove tecnico
     	try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/removeTecnico.fxml");
@@ -137,6 +140,7 @@ public class tecnicoController {
     	nomeTec.setCellValueFactory(new PropertyValueFactory<Tecnico, String>("name"));
     	nomeSelecTec.setCellValueFactory(new PropertyValueFactory<Tecnico, Selecao>("selecao"));
     	
+    	//Inicializa tabela de tecnico
     	this.tecTabela.getColumns().addAll(idTec, nomeTec, nomeSelecTec);
     	this.tecData.addAll(DAO.getTecnicoDao().retornaMap());
     	this.tecTabela.setItems(tecData);

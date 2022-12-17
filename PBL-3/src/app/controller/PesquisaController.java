@@ -45,7 +45,7 @@ public class PesquisaController {
 
     @FXML
     void btPesquisarAction(MouseEvent event) {
-    	
+    	//Abre tela pop up para pesquisar de selecao 
     	try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/PesquisaSelecao.fxml");
@@ -80,7 +80,7 @@ public class PesquisaController {
     
     
  
-    
+    //Seta os labels de selecao e tecnico pesquisados
     public void setTexts(String nomeSelec, String nomeTec) {
     	selecao.setText(nomeSelec);
     	tecnico.setText(nomeTec);
@@ -102,7 +102,7 @@ public class PesquisaController {
 		nomeJog.setCellValueFactory(new PropertyValueFactory<Jogador, String>("name"));
 		posicao.setCellValueFactory(new PropertyValueFactory<Jogador, String>("posicao"));
 		
-    
+		//Inicializa tabela de jogadores da selecao pesquisada 
 		this.pesquisaTabela.getColumns().addAll(idJog, nomeJog, posicao);
     	this.pesquisaTabela.setItems(pesquisaData);
     	

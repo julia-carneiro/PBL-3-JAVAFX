@@ -40,58 +40,53 @@ public class iniciarFase {
 	private Stage stage;
 
 	private fasedegrupoController controller;
-	
+
 	@FXML
 	void btAction(MouseEvent event) {
-		//Pega a quantas seleções tem na copa
+
+		//Pega quantidade de selecao da copa 
 		int qtdSelecoes = DAO.getSelecDao().retornaListaSelecoes().size();
-		
-		// Se caso a quantidade seleção seja a adequadra cria a fase de grupo
-		if (qtdSelecoes == 4) {
+		if (qtdSelecoes == 32) {
+			//Cria fase caso a quantida de selecoes seja adequada
 			FaseDeGrupo fasedegrupo = Main.getFaseDeGrupo();
+			
+
 			//Lista dos 8 grupos da copa
 			List<Grupos> grupo = new ArrayList<Grupos>();
 			grupo.addAll(fasedegrupo.getGrupos().values());
 			
-			// Seta as seleções para aparecer na interface 
+
+			//Seta os labels da selecao na interface
+
 			controller.setText1(grupo.get(0).getSelecao1().getName(), grupo.get(0).getSelecao2().getName(),
 					grupo.get(0).getSelecao3().getName(), grupo.get(0).getSelecao4().getName());
 
-			/*
-			 * controller.setText2(grupo.get(1).getSelecao1().getName(),
-			 * grupo.get(1).getSelecao2().getName(), grupo.get(1).getSelecao3().getName(),
-			 * grupo.get(1).getSelecao4().getName());
-			 * 
-			 * controller.setText3(grupo.get(2).getSelecao1().getName(),
-			 * grupo.get(2).getSelecao2().getName(), grupo.get(2).getSelecao3().getName(),
-			 * grupo.get(2).getSelecao4().getName());
-			 * 
-			 * controller.setText4(grupo.get(3).getSelecao1().getName(),
-			 * grupo.get(3).getSelecao2().getName(), grupo.get(3).getSelecao3().getName(),
-			 * grupo.get(3).getSelecao4().getName());
-			 * 
-			 * controller.setText5(grupo.get(4).getSelecao1().getName(),
-			 * grupo.get(4).getSelecao2().getName(), grupo.get(4).getSelecao3().getName(),
-			 * grupo.get(4).getSelecao4().getName());
-			 * 
-			 * controller.setText6(grupo.get(5).getSelecao1().getName(),
-			 * grupo.get(5).getSelecao2().getName(), grupo.get(5).getSelecao3().getName(),
-			 * grupo.get(5).getSelecao4().getName());
-			 * 
-			 * controller.setText7(grupo.get(6).getSelecao1().getName(),
-			 * grupo.get(6).getSelecao2().getName(), grupo.get(6).getSelecao3().getName(),
-			 * grupo.get(6).getSelecao4().getName());
-			 * 
-			 * controller.setText8(grupo.get(7).getSelecao1().getName(),
-			 * grupo.get(7).getSelecao2().getName(), grupo.get(7).getSelecao3().getName(),
-			 * grupo.get(7).getSelecao4().getName());
-			 */
+			controller.setText2(grupo.get(1).getSelecao1().getName(), grupo.get(1).getSelecao2().getName(),
+					grupo.get(1).getSelecao3().getName(), grupo.get(1).getSelecao4().getName());
+
+			controller.setText3(grupo.get(2).getSelecao1().getName(), grupo.get(2).getSelecao2().getName(),
+					grupo.get(2).getSelecao3().getName(), grupo.get(2).getSelecao4().getName());
+
+			controller.setText4(grupo.get(3).getSelecao1().getName(), grupo.get(3).getSelecao2().getName(),
+					grupo.get(3).getSelecao3().getName(), grupo.get(3).getSelecao4().getName());
+
+			controller.setText5(grupo.get(4).getSelecao1().getName(), grupo.get(4).getSelecao2().getName(),
+					grupo.get(4).getSelecao3().getName(), grupo.get(4).getSelecao4().getName());
+
+			controller.setText6(grupo.get(5).getSelecao1().getName(), grupo.get(5).getSelecao2().getName(),
+					grupo.get(5).getSelecao3().getName(), grupo.get(5).getSelecao4().getName());
+
+			controller.setText7(grupo.get(6).getSelecao1().getName(), grupo.get(6).getSelecao2().getName(),
+					grupo.get(6).getSelecao3().getName(), grupo.get(6).getSelecao4().getName());
+
+			controller.setText8(grupo.get(7).getSelecao1().getName(), grupo.get(7).getSelecao2().getName(),
+					grupo.get(7).getSelecao3().getName(), grupo.get(7).getSelecao4().getName());
+
 			stage.close();
 		} else {
 			labelError.setText("Só é possível iniciar com 32 seleções");
 		}
-		
-		
+
 	}
 	
 	// Caso a ação seja cancelada fecha a janela
@@ -99,8 +94,6 @@ public class iniciarFase {
 	void btCancelAction(MouseEvent event) {
 		stage.close();
 	}
-
-	
 
 	public void setDialogStage(Stage stage) {
 		// TODO Auto-generated method stub

@@ -148,10 +148,11 @@ public class SelecaoDao implements SelecaoDaoInter {
 		return false;
 	}
 
-	public Jogador get(int posicao) {		
-		return listajogadores.get(posicao);
+	
+	//Retorna jogador na posicaoo desejada
+	public Jogador getJog(int posicaoLista) {
+		return listajogadores.get(posicaoLista);
 	}
 
-	
 }
 	

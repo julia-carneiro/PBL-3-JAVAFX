@@ -26,12 +26,12 @@ public class addArbitro {
 
 	private arbitroController controller;
 
-
-
+	
     @FXML
     void btSalvarAction(MouseEvent event) {
     	// Cria o arbitro e adiciona ele no controller e no DAO de arbitro
     	Arbitro arbitro = new Arbitro(this.nomeArb.getText().toUpperCase());
+    	//Cria o arbitro e adiciona ao DAO e controller
     	controller.getArbData().add(arbitro);
     	DAO.getArbitroDao().create(arbitro);
     	stage.close();

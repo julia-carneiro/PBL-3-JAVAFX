@@ -24,7 +24,9 @@ public class removeJogador {
     
     @FXML
     void btRemoveAction(MouseEvent event) {
-    	// Pega a posição do jogador na tabela
+
+    	//Remove jogador selecionado na tabela 
+
     	int i = this.controller.getJogTabela().getSelectionModel().getSelectedIndex();
     	// busca e remove o jogador no DAO
     	Jogador jog = DAO.getJogDao().findByCodjog(this.controller.getjogData().get(i).getId());

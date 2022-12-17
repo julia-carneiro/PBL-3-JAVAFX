@@ -33,9 +33,11 @@ public class arbitroController {
 
 	private ObservableList<Arbitro> arbData;
 
-	//Botão de ação para adicionar arbitro
+	
+
 	@FXML
 	void btAddAction(MouseEvent event) {
+		//Abre tela pop up para ADD arbitro
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/addArbitro.fxml");
@@ -66,6 +68,7 @@ public class arbitroController {
 	//Botão de ação para editar arbitro
 	@FXML
 	void btEditAction(MouseEvent event) {
+		//Abre tela pop up para editar arbitro
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/editArbitro.fxml");
@@ -96,6 +99,7 @@ public class arbitroController {
 	// Botão de ação para remover arbitro
 	@FXML
 	void btRemoveAction(MouseEvent event) {
+		//Abre tela pop up para excluir arbitro
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/removeArbitro.fxml");
@@ -125,7 +129,9 @@ public class arbitroController {
 
 	@FXML
 	void initialize() {
-		//inicializa a tabela com id e nome do arbitro
+
+		
+
 		this.arbData = FXCollections.observableArrayList();
 
 		TableColumn idArb = new TableColumn("Id");
@@ -133,7 +139,8 @@ public class arbitroController {
 
 		idArb.setCellValueFactory(new PropertyValueFactory<Tecnico, Integer>("id"));
 		nomeArb.setCellValueFactory(new PropertyValueFactory<Tecnico, String>("name"));
-
+		
+		//Inicializa tabela com id e nome do arbitro na interface
 		this.arbitroTabela.getColumns().addAll(idArb, nomeArb);
 		this.arbData.addAll(DAO.getArbitroDao().retornaMap());
 		this.arbitroTabela.setItems(arbData);

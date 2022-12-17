@@ -35,9 +35,10 @@ public class jogadorController {
 
 	@FXML
 	private ObservableList<Jogador> jogData;
-
+	
 	@FXML
 	void btAddAction(MouseEvent event) {
+		//Abre tela pop up para add jogador
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/addJogador.fxml");
@@ -67,6 +68,7 @@ public class jogadorController {
 
 	@FXML
 	void btEditAction(MouseEvent event) {
+		//Abre tela pop up para editar jogador
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/editJogador.fxml");
@@ -99,6 +101,7 @@ public class jogadorController {
 
 	@FXML
 	void btRemoveAction(MouseEvent event) {
+		//Abre tela pop up para excluir jogador
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/removeJogador.fxml");
@@ -131,16 +134,20 @@ public class jogadorController {
 		// Inicializa a tabela de jogadores com os IDs, nomes, posição, e Seleções 
 		
 		this.jogData = FXCollections.observableArrayList();
+
+
+
 		TableColumn idJog = new TableColumn("Id");
 		TableColumn nomeJog = new TableColumn("Nome");
 		TableColumn posicao = new TableColumn("Posição");
 		TableColumn nomeSelec = new TableColumn("Seleção");
-
+		
 		idJog.setCellValueFactory(new PropertyValueFactory<Jogador, Integer>("id"));
 		nomeJog.setCellValueFactory(new PropertyValueFactory<Jogador, String>("name"));
 		posicao.setCellValueFactory(new PropertyValueFactory<Jogador, String>("posicao"));
 		nomeSelec.setCellValueFactory(new PropertyValueFactory<Jogador, Selecao>("selecao"));
-
+		
+		//Inicializa a tabela de jogadores na interface - id, nome, posicao, selecao
 		this.jogTabela.getColumns().addAll(idJog, nomeJog, posicao, nomeSelec);
 		this.jogData.addAll(DAO.getJogDao().retornaMap());
 		this.jogTabela.setItems(jogData);

@@ -120,6 +120,7 @@ public class fasedegrupoController {
     
     @FXML
     void iniciarfase(MouseEvent event) {
+    	//Abre tela pop up para perguntar se deseja iniciar a fase de grupos
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/iniciarFase.fxml");
@@ -150,7 +151,9 @@ public class fasedegrupoController {
     }
 
     
-    //Seta os textos para os nomes das seleções nas inferfaces 
+
+    //Seta os labels das selecoes na fase de grupo
+
     
 	public void setText1(String nomeselec1, String nomeselec2, String nomeselec3, String nomeselec4) {
 		selecao1.setText(nomeselec1);
@@ -214,4 +217,7 @@ public class fasedegrupoController {
       
     }
 
+    
+    
 }
+

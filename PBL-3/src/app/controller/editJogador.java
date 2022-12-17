@@ -31,7 +31,9 @@ public class editJogador {
 	
 	@FXML
 	void btSalvarAction(MouseEvent event) {
-		// Posição do jogador na tabela
+
+		//Pega index do jogador selecionado na ta
+
 		int i = this.controller.getJogTabela().getSelectionModel().getSelectedIndex();
 		
 		if (i >= 0) {

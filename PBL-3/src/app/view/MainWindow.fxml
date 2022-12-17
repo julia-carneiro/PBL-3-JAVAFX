@@ -117,7 +117,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#fasedegrupo" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Mata-mata" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#matamata" prefHeight="39.0" prefWidth="172.0" styleClass="bt" stylesheets="@css/style.css" text="Mata-mata" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Black" size="17.0" />
                </font>
