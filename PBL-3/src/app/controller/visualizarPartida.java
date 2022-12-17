@@ -69,6 +69,7 @@ public class visualizarPartida {
     
     @FXML
     void btPesquisar(MouseEvent event) {
+    	
     	String id = idGrupo.getText().toUpperCase();
     	Grupos grupo = Main.getFaseDeGrupo().getGrupos().get(id);
  
@@ -93,6 +94,7 @@ public class visualizarPartida {
 	    	p6s2.setText("--");
     		
     	}else {
+    		//Seta partidas na interface
 	    	Map <Integer, Partida> partidas = grupo.getPartidas();
 	    	System.out.println(partidas);
 	    	p1s1.setText(partidas.get(1).getSelecao1().getName());

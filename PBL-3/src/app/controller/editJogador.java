@@ -30,6 +30,7 @@ public class editJogador {
 
 	@FXML
 	void btSalvarAction(MouseEvent event) {
+		//Pega index do jogador selecionado na ta
 		int i = this.controller.getJogTabela().getSelectionModel().getSelectedIndex();
 		if (i >= 0) {
 			Jogador jog = DAO.getJogDao().findByCodjog(this.controller.getjogData().get(i).getId());

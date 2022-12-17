@@ -41,6 +41,7 @@ public class addTecnico {
 				Tecnico tecnico = new Tecnico(this.nomeTec.getText().toUpperCase(), selecao);
 				selecao.setTecnico(tecnico);
 				controller.getTecData().add(tecnico);
+				//Adiciona no DAO
 				DAO.getTecnicoDao().create(tecnico);
 				DAO.getSelecDao().create(selecao);
 				

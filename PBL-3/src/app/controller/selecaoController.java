@@ -36,6 +36,7 @@ public class selecaoController {
 
 	@FXML
 	void btAddAction(MouseEvent event) {
+		//Abre tela pop up para add selecao
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/addSelecao.fxml");
@@ -65,6 +66,7 @@ public class selecaoController {
 
 	@FXML
 	void btEditAction(MouseEvent event) {
+		//Abre tela pop up para editar selecao
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/editSelecao.fxml");
@@ -94,6 +96,7 @@ public class selecaoController {
 
 	@FXML
 	void btRemoveAction(MouseEvent event) {
+		//Abre tela pop up para remover selecao
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/removeSelecao.fxml");
@@ -129,7 +132,8 @@ public class selecaoController {
 		TableColumn nomeSelecao = new TableColumn("Nome");
 
 		nomeSelecao.setCellValueFactory(new PropertyValueFactory<Selecao, String>("name"));
-
+		
+		//Inicializa tabela de selecao 
 		this.selecTabela.getColumns().addAll(nomeSelecao);
 		this.selecData.addAll(DAO.getSelecDao().retornaListaSelecoes());
 		this.selecTabela.setItems(selecData);

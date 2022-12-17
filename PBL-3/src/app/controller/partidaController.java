@@ -85,6 +85,7 @@ public class partidaController {
 
 	@FXML
 	void visualizarPartida(MouseEvent event) {
+		//Abre tela pop up para visualizar partida 
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			URL xmlURL = getClass().getResource("/app/view/visualizarPartida.fxml");

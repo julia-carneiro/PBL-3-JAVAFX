@@ -39,14 +39,16 @@ public class addJogador {
 	private Stage stage;
 
 	private jogadorController controller;
-
+	
+	//
 	@FXML
 	void btSalvarAction(MouseEvent event) {
+		//Encontra selecao a partir do nome
 		Selecao selec = DAO.getSelecDao().findByName(this.nomeSelec.getText().toUpperCase());
-
+		
+		//Cria o jogador e a selecao do jogador caso não tenha sido encontrada
 		if (selec == null) {
 			try {
-
 				Selecao selecao = new Selecao(this.nomeSelec.getText().toUpperCase());
 				Jogador jog = new Jogador(this.nomeJog.getText().toUpperCase(), this.posicaoJog.getValue(), selecao);
 				// Cria nos DAOS
@@ -67,6 +69,7 @@ public class addJogador {
 			}
 		} else {
 			try {
+				//Cria um jogador e adiciona na selecao existente
 				Jogador jog = new Jogador(this.nomeJog.getText().toUpperCase(), this.posicaoJog.getValue(), selec);
 				controller.getjogData().add(jog);
 				DAO.getJogDao().create(jog);
@@ -88,6 +91,7 @@ public class addJogador {
 
 	@FXML
 	void initialize() {
+		//Add a lista de posicoes no combobox
 		posicaoJog.getItems().addAll(Posicoes.posicoes);
 	}
 
